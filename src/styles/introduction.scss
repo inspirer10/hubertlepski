@@ -1,0 +1,109 @@
+.introduction_section {
+    height: 100vh;
+    background-size: cover;
+    background-image: url('/bgc.png');
+    background-image: url('/bgc2.png');
+    background-position: bottom;
+    main {
+        padding-top: 10vh;
+        margin: 0 auto;
+        width: 80%;
+    }
+    .avatar_image {
+        object-fit: cover;
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+        aspect-ratio: 1/1;
+        margin-bottom: 1.25rem;
+    }
+    h2,
+    h3 {
+        font-family: 'Geist', sans-serif;
+        font-size: calc(3.5rem + 4px);
+        font-weight: 600;
+        letter-spacing: -0.75px;
+        line-height: 1.2;
+    }
+    h3 {
+        font-size: 3.5rem;
+        letter-spacing: -1px;
+        font-family: 'SUSE', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        display: flex;
+        align-items: center;
+        .icon_image {
+            height: 50px;
+            width: 50px;
+            margin: 0 1rem;
+        }
+    }
+    .subHeading {
+        margin: 1rem 0 2rem;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.35;
+        width: 60%;
+    }
+    .buttons-wrapepr {
+        display: flex;
+        gap: 1.25rem;
+        button {
+            height: 3rem;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            cursor: pointer;
+        }
+        .book_call {
+            border-radius: 12px;
+            transition: .18s ease-in-out;
+            border: 1px solid transparent;
+            &:hover {
+                background-color: rgb(30, 30, 30);
+                color: #fff;
+                border-color: rgb(50, 50, 50);
+            }
+        }
+        .projects {
+            padding: 25px;
+            // background-color: #c8edc4;  //color: #218d0b;
+            position: relative;
+            border-radius: 50px;
+            padding-left: 2rem;
+            background-color: rgb(0, 0, 125);
+            color: lightblue;
+            overflow: hidden;
+            transition: .275s ease-in-out;
+            z-index: 10;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 1rem;
+                transform: translate(0%, -50%);
+                height: 8px;
+                width: 8px;
+                border-radius: 50%;
+                background-color: lightblue;
+                z-index: -1;
+                transition: .3s ease-in-out;
+            }
+            &:hover {
+                //border-color: rgb(45, 154, 201);
+                //border-color: rgb(55, 129, 161);
+                color: rgb(0, 0, 125);
+                &::before {
+                    transform: scale(75);
+                }
+            }
+        }
+    }
+}

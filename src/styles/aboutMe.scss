@@ -1,0 +1,21 @@
+.aboutMe_section {
+    width: 80%;
+    margin: 25vh auto;
+    h5 {
+        font-family: 'Lexend Deca', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+    }
+    .aboutMe-content {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.35;
+        width: 50%;
+        color: rgb(200, 200, 200);
+        text-wrap: balance;
+        text-align: justify;
+    }
+}
