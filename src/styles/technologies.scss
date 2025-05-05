@@ -1,0 +1,86 @@
+.technologies_section {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 15vh; // to remove
+    height: 100vh;
+    h5 {
+        font-family: 'Lexend Deca', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    .subHeading {
+        font-family: 'Geist', sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.35;
+        letter-spacing: -0px;
+        width: 50%;
+        color: rgb(200, 200, 200);
+        text-wrap: balance;
+        text-align: justify;
+    }
+    .marquee-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        margin: 4rem 0;
+        &::before,
+        &::after {
+            content: "";
+            height: 100%;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            width: 12.5%;
+            z-index: 1;
+            background: linear-gradient(270deg, hsla(0, 0%, 100%, 0), rgb(12, 12, 12));
+            left: 0;
+        }
+        &::after {
+            background: linear-gradient(90deg, hsla(0, 0%, 100%, 0), rgb(12, 12, 12));
+            right: 0;
+            left: unset;
+        }
+        .marquee {
+            display: flex;
+            flex-direction: row;
+            width: max-content;
+            animation: marquee-animation 18s linear infinite forwards;
+            gap: 5rem;
+            padding: 1rem;
+            .technology-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+                cursor: pointer;
+                transition: .225s ease-in-out;
+                &:hover {
+                    transform: scale(1.15);
+                }
+                img {
+                    filter: grayscale(65%);
+                    transition: 0.225s ease-in-out;
+                    &:hover {
+                        filter: grayscale(0%);
+                    }
+                }
+                .tech-name {
+                    font-size: 15px;
+                    color: rgb(200, 200, 200);
+                    opacity: 0.8;
+                    text-wrap: nowrap;
+                    letter-spacing: -0.25px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes marquee-animation {
+    to {
+        transform: translateX(calc(-50% - 1.5rem));
+    }
+}

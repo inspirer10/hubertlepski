@@ -19,25 +19,22 @@ function RecentPhotos() {
     return (
         <section className='recent-photos_section'>
             <motion.h2
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{
-                    delay: 0.25,
-                    duration: 1.25,
-                    type: 'easeIn',
-                }}
+                transition={{ delay: 0.25, duration: 1, type: 'easeIn' }}
             >
                 Some of my recent photography
             </motion.h2>
+
             <motion.p
                 className='subHeading'
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                    delay: 0.5,
-                    duration: 1.25,
+                    delay: 0.25,
+                    duration: 1,
                     type: 'easeIn',
                 }}
             >
@@ -52,21 +49,28 @@ function RecentPhotos() {
                     viewport={{ once: true }}
                     transition={{
                         delay: 0.25,
-                        duration: 1.25,
-                        type: 'ease',
+                        duration: 1.1,
+                        type: 'easeIn',
                     }}
                 >
                     <div className='image-wrapper'>
                         <Image
-                            src={'/photo.jpg'}
+                            src={'/pizza.jpg'}
                             height={900}
                             width={900}
                             alt='Recent Photography'
                             className='rotated'
                         />
                     </div>
-                    <p>Grand Canyon - 08.2024</p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5, duration: 0.75 }}
+                    >
+                        Grand Canyon - 08.2024
+                    </motion.p>
                 </motion.div>
+
                 <motion.div
                     className='photo-container'
                     initial={{ opacity: 0, x: 250 }}
@@ -78,19 +82,25 @@ function RecentPhotos() {
                     viewport={{ once: true }}
                     transition={{
                         delay: 0.25,
-                        duration: 1.25,
-                        type: 'ease',
+                        duration: 1.1,
+                        type: 'easeIn',
                     }}
                 >
                     <div className='image-wrapper'>
                         <Image
-                            src={'/photo.jpg'}
+                            src={'/mona.jpg'}
                             height={900}
                             width={900}
                             alt='Recent Photography'
                         />
                     </div>
-                    <p>London Big Ben - 11.2024</p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5, duration: 0.75 }}
+                    >
+                        London Big Ben - 11.2024
+                    </motion.p>
                 </motion.div>
             </main>
         </section>

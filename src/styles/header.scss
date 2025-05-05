@@ -1,32 +1,46 @@
 header {
     position: fixed;
+    z-index: 10000;
     top: 2.75rem;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(7.5px);
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(7px);
     border-radius: 16px;
-    padding: 0.75rem 2.5rem;
+    padding: 0.5rem 2.25rem;
+    padding-left: 1.75rem;
     border: 1px solid rgba(200, 200, 200, 0.5);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 2.5rem;
-        p {
+        gap: 2.25rem;
+        .link {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            color: #333;
+            //color: #333;
+            //color: #FFF;
+            color: rgb(190, 190, 190);
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 500;
             letter-spacing: -0.25px;
             text-transform: uppercase;
             padding: 4px 0;
             position: relative;
             width: fit-content;
+            user-select: none;
             cursor: pointer;
-            transition: color 0.3s ease, transform 0.3s ease;
-            &::after {
+            transition: all 0.3s ease, border 0s;
+            &.active {
+                color: #FFF;
+                &::before {
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+            &::after,
+            &::before {
                 content: '';
                 position: absolute;
                 width: 100%;
@@ -35,16 +49,31 @@ header {
                 bottom: 0;
                 transform: translate(-50%, -50%) scale(0);
                 background-color: rgb(50, 50, 50);
+                background-color: #FFF;
                 transition: color 0.3s ease, transform 0.3s ease;
             }
+            &::before {
+                transform: translate(-100%, -50%) scale(0);
+            }
             &:hover {
+                border: none;
                 color: rgb(50, 50, 50);
+                color: #FFF;
                 transform: translateY(-2px);
                 &::after {
                     transform: translate(-50%, -50%) scale(1);
-                    background-color: rgb(30, 30, 30);
+                    //background-color: rgb(30, 30, 30);
+                    background-color: #FFF;
                 }
             }
         }
+    }
+}
+
+nav:has(.link:hover) {
+    .link:not(:hover) {
+        opacity: 0.5;
+        filter: blur(1.75px);
+        transition: all 0.3s ease;
     }
 }
