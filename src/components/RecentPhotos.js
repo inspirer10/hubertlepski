@@ -19,14 +19,15 @@ function RecentPhotos() {
     return (
         <section className='recent-photos_section'>
             <motion.h2
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.25, duration: 1, type: 'easeIn' }}
+                transition={{ delay: 0.3, duration: 1, type: 'ease' }}
             >
                 Some of my recent photography
             </motion.h2>
 
+            {/*
             <motion.p
                 className='subHeading'
                 initial={{ opacity: 0, y: 20 }}
@@ -40,6 +41,7 @@ function RecentPhotos() {
             >
                 from trips to English speaking countries
             </motion.p>
+            */}
 
             <main>
                 <motion.div
@@ -65,7 +67,7 @@ function RecentPhotos() {
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.5, duration: 0.75 }}
+                        transition={{ delay: 0.25, duration: 0.66 }}
                     >
                         Grand Canyon - 08.2024
                     </motion.p>
@@ -97,7 +99,7 @@ function RecentPhotos() {
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.5, duration: 0.75 }}
+                        transition={{ delay: 0.25, duration: 0.66 }}
                     >
                         London Big Ben - 11.2024
                     </motion.p>

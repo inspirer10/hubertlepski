@@ -1,8 +1,10 @@
+//@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merienda:wght@300..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=SUSE:wght@100..800&display=swap');
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    //font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter);
     scrollbar-width: thin;
     &::selection {
         color: #FFF;
@@ -13,7 +15,11 @@
 html,
 body {
     max-width: 100vw;
-    // overflow-x: hidden;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {

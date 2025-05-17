@@ -1,10 +1,16 @@
 .introduction_section {
     height: 100vh;
+    //background-image: url('/bgc2.png');
+    background-image: url('/bgc2.jpg');
     background-size: cover;
-    background-image: url('/bgc.png');
-    background-image: url('/bgc2.png');
     background-position: bottom;
+    position: relative;
+    will-change: transform; // For elements that will animate
+    transform: translateZ(0); // Force GPU acceleration
+    backface-visibility: hidden;
     main {
+        z-index: 10;
+        position: relative;
         padding-top: 12.5vh;
         margin: 0 auto;
         width: 80%;
@@ -30,7 +36,7 @@
         color: transparent;
     }
     h3 {
-        font-family: 'SUSE', sans-serif;
+        //font-family: 'SUSE', sans-serif;
         font-family: 'Plus Jakarta Sans', sans-serif;
         font-size: 3.5rem;
         letter-spacing: -1px;
@@ -49,12 +55,18 @@
         }
     }
     .subHeading {
+        color: rgb(185, 185, 185);
         margin: 1rem 0 2rem;
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        //font-family: 'Plus Jakarta Sans', sans-serif;
+        //font-family: 'Lexend Deca', sans-serif;
+        //font-family: 'Inter', sans-serif;
+        font-family: var(--font-inter);
         font-size: 20px;
         font-weight: 500;
-        line-height: 1.35;
+        line-height: 1.45;
         width: 60%;
+        min-width: 800px;
+        text-wrap: balance;
     }
     .buttons-wrapepr {
         display: flex;
@@ -73,11 +85,13 @@
             cursor: pointer;
         }
         .download_button {
+            font-family: 'SUSE', sans-serif;
+            letter-spacing: -0.25px;
             border-radius: 12px;
-            transition: .18s ease-in-out;
-            border: 1px solid transparent;
             display: flex;
             align-items: center;
+            border: 1px solid transparent;
+            transition: .18s ease-in-out;
             &:hover {
                 background-color: rgb(30, 30, 30);
                 color: #fff;

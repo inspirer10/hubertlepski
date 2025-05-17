@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
-
-import { useAnimation } from 'motion/react';
+import { motion, useAnimation } from 'motion/react';
 import { DownloadIcon } from './animatedIcons/DownloadIcon';
 
 function Introduction() {
@@ -14,13 +12,17 @@ function Introduction() {
             <main>
                 <Image
                     src={'/avatar.png'}
-                    height={650}
-                    width={650}
+                    //src={'/avatar.jpg'}
+                    height={350}
+                    width={350}
                     className='avatar_image'
                     alt='person avatar'
-                    priority={true}
+                    priority={false}
+                    loading='lazy'
                     placeholder='blur'
+                    quality={100}
                     blurDataURL='/avatar.png'
+                    //blurDataURL='/avatar.jpg'
                 />
                 <motion.h2
                     initial={{ opacity: 0, y: 25 }}
@@ -71,9 +73,11 @@ function Introduction() {
                         stiffness: 35,
                     }}
                 >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Accusamus omnis distinctio atque natus dolores! Aperiam
-                    dolor doloribus vero minima.
+                    I am an open-minded developer, eager to learn new
+                    technologies and tools. I am flexible in working both
+                    remotely and in-office, and open to relocation if necessary.
+                    I quickly adapt to new environments, effectively communicate
+                    in English, and enjoy working in diverse teams.
                 </motion.p>
 
                 <motion.div

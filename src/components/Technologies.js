@@ -61,6 +61,9 @@ function Technologies() {
                                     width={75}
                                     height={75}
                                     alt={alt}
+                                    loading='lazy'
+                                    placeholder='blur'
+                                    blurDataURL={`/technologies${src}`}
                                 />
                                 <span className='tech-name'>{alt}</span>
                             </div>

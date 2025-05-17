@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { CodeIcon } from './animatedIcons/CodeIcon';
-import Link from 'next/link';
 
 function Header({ activeSection }) {
     const [isHeaderHovered, setIsHeaderHovered] = useState(false);
@@ -13,6 +12,14 @@ function Header({ activeSection }) {
         { name: 'Contact' },
     ];
 
+    const handleClick = useCallback((e, sectionId) => {
+        e.preventDefault();
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, []);
+
     return (
         <header
             onMouseEnter={() => setIsHeaderHovered(true)}
@@ -22,15 +29,16 @@ function Header({ activeSection }) {
             <CodeIcon isHovered={isHeaderHovered} />
             <nav>
                 {linksData.map(({ name }, index) => (
-                    <Link
+                    <a
                         key={index}
                         href={`#${name}`}
+                        onClick={(e) => handleClick(e, name)}
                         className={
-                            activeSection === `${name}` ? 'active link' : 'link'
+                            activeSection === name ? 'active link' : 'link'
                         }
                     >
                         {name}
-                    </Link>
+                    </a>
                 ))}
             </nav>
         </header>

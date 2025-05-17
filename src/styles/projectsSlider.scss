@@ -1,0 +1,197 @@
+/*.projects-slider {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    //display: none;
+    .slider-track {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        padding: 4rem 0;
+        .project-card {
+            padding: 0.5rem;
+            flex: 0 0 auto;
+            width: 600px; // Increased width
+            height: 500px; // Added fixed height
+            border-radius: 24px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            // transition: 0.325s ease;
+            &:hover {
+                //transform: translateY(-7px);
+                //border: 1px solid rgba(255, 255, 255, 0.225);
+                .text-wrapper {
+                    h3 {
+                        color: #fff;
+                    }
+                }
+            }
+            .project-image {
+                width: 100%;
+                height: 400px; // Increased image height
+                object-fit: cover;
+                border-radius: 16px;
+            }
+            .text-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.25rem 1.5rem 1.5rem;
+                h3 {
+                    font-family: 'SUSE', sans-serif;
+                    font-size: 1.75rem;
+                    font-weight: 500;
+                    word-spacing: 4px;
+                    color: rgb(185, 185, 185);
+                    user-select: none;
+                    transition: 0.325s ease;
+                }
+                .arrow-wrapper {
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid rgb(125, 125, 125);
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: 0.325s ease;
+                    &:hover {
+                        border-color: rgb(225, 225, 225);
+                        .icon {
+                            color: #fff;
+                            transform: translateX(2px);
+                            transition: .175s ease;
+                        }
+                    }
+                    .icon {
+                        color: rgb(175, 175, 175);
+                        font-size: 1.25rem;
+                        transition: 0.325s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+*/
+
+.projects-slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    &::before,
+    &::after {
+        content: "";
+        height: 100%;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 12.5%;
+        z-index: 1;
+        background: linear-gradient(270deg, hsla(0, 0%, 100%, 0), rgb(12, 12, 12));
+        left: 0;
+    }
+    &::after {
+        background: linear-gradient(90deg, hsla(0, 0%, 100%, 0), rgb(12, 12, 12));
+        right: 0;
+        left: unset;
+    }
+    .projects-slider {
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+        animation: marquee-animation 25s linear infinite forwards;
+        gap: 2.5rem;
+        padding: 5rem 0;
+        will-change: transform;
+        .project-card {
+            padding: 0.5rem;
+            flex: 0 0 auto;
+            width: 600px;
+            width: 35vw;
+            height: 500px;
+            height: auto;
+            border-radius: 24px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            &:hover {
+                .project-image {
+                    transform: scale(1.025);
+                }
+                .text-wrapper {
+                    h3 {
+                        color: #fff;
+                    }
+                }
+            }
+            .image-wrapper {
+                width: 100%;
+                height: 400px; //Increased image height
+                border-radius: 16px;
+                overflow: hidden;
+                .project-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 16px;
+                    transition: 0.275s ease;
+                }
+            }
+            .text-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.25rem 1.5rem 1.5rem;
+                h3 {
+                    font-family: 'SUSE', sans-serif;
+                    font-size: 1.75rem;
+                    font-weight: 500;
+                    word-spacing: 4px;
+                    color: rgb(185, 185, 185);
+                    user-select: none;
+                    transition: 0.325s ease;
+                }
+                .arrow-wrapper {
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid rgb(125, 125, 125);
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: 0.325s ease;
+                    &:hover {
+                        border-color: rgb(225, 225, 225);
+                        .icon {
+                            color: #fff;
+                            transform: translateX(2px);
+                            transition: .175s ease;
+                        }
+                    }
+                    .icon {
+                        color: rgb(175, 175, 175);
+                        font-size: 1.25rem;
+                        transition: 0.325s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes marquee-animation {
+    to {
+        transform: translateX(calc(-50% - 1.5rem));
+    }
+}
