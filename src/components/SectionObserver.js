@@ -22,19 +22,20 @@ function SectionsObserver({ children }) {
 
     const getThreshold = (sectionName) => {
         const thresholds = {
-            Home: scrollDirection === 'down' ? 0.33 : 0.2,
+            // Home: scrollDirection === 'down' ? 0.33 : 0.2,
             About: scrollDirection === 'down' ? 0.6 : 0.175,
             Technologies: scrollDirection === 'down' ? 0.66 : 0.3,
             Projects: scrollDirection === 'down' ? 0.66 : 0.3,
+            Experience: scrollDirection === 'down' ? 0.66 : 0.3,
             Contact: scrollDirection === 'down' ? 0.66 : 0.3,
         };
         return thresholds[sectionName];
     };
 
-    const { ref: homeRef, inView: homeInView } = useInView({
-        threshold: getThreshold('Home'),
-        delay: 50,
-    });
+    // const { ref: homeRef, inView: homeInView } = useInView({
+    //    threshold: getThreshold('Home'),
+    //     delay: 50,
+    // });
 
     const { ref: aboutRef, inView: aboutInView } = useInView({
         threshold: getThreshold('About'),
@@ -51,6 +52,11 @@ function SectionsObserver({ children }) {
         delay: 50,
     });
 
+    const { ref: experienceRef, inView: experienceInView } = useInView({
+        threshold: getThreshold('Experience'),
+        delay: 50,
+    });
+
     const { ref: contactRef, inView: contactInView } = useInView({
         threshold: getThreshold('Contact'),
         delay: 50,
@@ -58,22 +64,31 @@ function SectionsObserver({ children }) {
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
-            if (homeInView) setActiveSection('Home');
+            // if (homeInView) setActiveSection('Home');
             if (aboutInView) setActiveSection('About');
             if (techInView) setActiveSection('Technologies');
             if (projectsInView) setActiveSection('Projects');
+            if (experienceInView) setActiveSection('Experience');
             if (contactInView) setActiveSection('Contact');
         }, 50);
 
         return () => clearTimeout(timeoutId);
-    }, [homeInView, aboutInView, techInView, projectsInView, contactInView]);
+    }, [
+        // homeInView,
+        aboutInView,
+        techInView,
+        projectsInView,
+        experienceInView,
+        contactInView,
+    ]);
 
     return children({
         refs: {
-            homeRef,
+            //   homeRef,
             aboutRef,
             techRef,
             projectsRef,
+            experienceRef,
             contactRef,
         },
         activeSection,

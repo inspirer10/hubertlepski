@@ -8,21 +8,12 @@
         h5 {
             //font-family: 'Lexend Deca', sans-serif;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 2.25rem;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Onest', sans-serif;
+            font-size: 2.5rem;
             font-weight: 600;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
             word-spacing: 4px;
-        }
-        .aboutMe-content {
-            // font-family: 'Geist', sans-serif;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 20px;
-            font-weight: 300;
-            line-height: 1.35;
-            width: 50%;
-            color: rgb(200, 200, 200);
-            text-wrap: balance;
-            text-align: justify;
         }
         .text-container {
             width: 100%;
@@ -38,7 +29,7 @@
                 .paragraph {
                     //max-width: 1280px;
                     width: 40%;
-                    margin-top: 5rem;
+                    margin-top: 6rem;
                     font-size: 20px;
                     font-weight: 500;
                     line-height: 1.4;
@@ -58,6 +49,7 @@
                         // font-family: 'Inter', sans-serif;
                         //font-family: 'Geist', sans-serif;
                         font-family: 'Plus Jakarta Sans', sans-serif;
+                        font-family: 'Onest', sans-serif;
                     }
                 }
             }
@@ -72,11 +64,12 @@
                 font-family: "SUSE", sans-serif;
                 font-size: 2.25rem;
                 font-weight: 600;
-                letter-spacing: 0.5px;
+                letter-spacing: 0.25px;
                 width: 15%;
+                width: auto;
                 text-wrap: nowrap;
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
             }
             aside {
                 width: 85%;
@@ -97,14 +90,14 @@
                     padding: 16px 22px;
                     margin-bottom: 8px;
                     border: 1px solid rgba(125, 125, 125, 0.25);
-                    transition: .35s cubic-bezier(.33, 1, .68, 1);
-                    cursor: pointer;
                     user-select: none;
+                    transition: .4s cubic-bezier(.33, 1, .68, 1);
+                    cursor: pointer;
                     .primary {
-                        font-family: "SUSE", sans-serif;
+                        font-family: "Barlow", sans-serif;
                         top: 0;
                         position: relative;
-                        transition: top .35s cubic-bezier(.33, 1, .68, 1);
+                        transition: top .4s cubic-bezier(.33, 1, .68, 1);
                     }
                     .secondary {
                         position: absolute;
@@ -115,7 +108,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        transition: top .35s cubic-bezier(.33, 1, .68, 1);
+                        transition: top .4s cubic-bezier(.33, 1, .68, 1);
                         p {
                             font-family: "SUSE", sans-serif;
                             position: absolute;
@@ -124,7 +117,7 @@
                             width: 60%;
                             height: 100%;
                             border-radius: 50%;
-                            transition: all .35s cubic-bezier(.33, 1, .68, 1);
+                            transition: all .4s cubic-bezier(.33, 1, .68, 1);
                         }
                     }
                     &:hover {

@@ -1,23 +1,30 @@
 .technologies_section {
     width: 80%;
     margin: 0 auto;
-    padding-top: 15vh; // to remove
-    height: 100vh;
+    padding-top: 15vh;
+    // to remove
+    // height: 100vh;
     h5 {
         //font-family: 'Lexend Deca', sans-serif;
         font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: 'Inter', sans-serif;
+        font-family: 'Onest', sans-serif;
+        letter-spacing: 0.25px;
         font-size: 2.25rem;
         font-weight: 600;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.25rem;
     }
     .subHeading {
-        font-family: 'Geist', sans-serif;
+        //font-family: 'Geist', sans-serif;
+        font-family: 'Inter', sans-serif;
+        font-family: 'Barlow', sans-serif;
+        letter-spacing: -0.25px;
         font-size: 20px;
         font-weight: 300;
+        font-weight: 400;
         line-height: 1.35;
-        letter-spacing: -0px;
         width: 50%;
-        color: rgb(200, 200, 200);
+        color: rgb(125, 125, 125);
         text-wrap: balance;
         text-align: justify;
     }
@@ -47,22 +54,26 @@
             display: flex;
             flex-direction: row;
             width: max-content;
-            animation: marquee-animation 18s linear infinite forwards;
-            gap: 5rem;
+            animation: marquee-animation 24s linear infinite forwards;
+            gap: 6rem;
             padding: 1rem;
             .technology-item {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 gap: 0.5rem;
+                padding: 0.5rem;
                 cursor: pointer;
-                transition: .225s ease-in-out;
+                transition: .35s ease;
                 &:hover {
                     transform: scale(1.15);
+                    .tech-name {
+                        color: #FFF;
+                    }
                 }
                 img {
                     filter: grayscale(65%);
-                    transition: 0.225s ease-in-out;
+                    transition: 0.35s ease;
                     &:hover {
                         filter: grayscale(0%);
                     }

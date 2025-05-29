@@ -1,35 +1,46 @@
 import Image from 'next/image';
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
+import React, { useMemo } from 'react';
+import { motion } from 'motion/react';
 import { FaAngleRight } from 'react-icons/fa6';
+import Link from 'next/link';
 
 function ProjectSlider() {
     const projectsData = [
         {
             title: 'Tuscany Restaurant',
             image: '/slider/tuscany.jpg',
+            link: '',
         },
         {
             title: 'Expiration Reminder',
             image: '/slider/expiration-reminder.jpg',
+            link: '',
         },
         {
             title: 'MUSTHAVE Store',
             image: '/slider/musthave2.jpg',
+            link: '',
         },
         {
             title: 'Food Master',
             image: '/slider/food-master.jpg',
+            link: '',
         },
-        // {
-        //    title: 'Prototype Vehicle',
-        //    image: '/slider/car.jpg',
-        // },
+        {
+            title: 'English Tutor',
+            //! image: '/slider/english-tutor.jpg',
+            image: '/slider/subscriptions-tracker.jpg',
+            link: '',
+        },
         {
             title: 'Subscriptions Tracker',
             image: '/slider/subscriptions-tracker.jpg',
+            link: '',
         },
     ];
+    const doubledProjectsData = useMemo(() => {
+        return [...projectsData, ...projectsData];
+    }, []); //empty array bcs projectsData is static
 
     return (
         {
@@ -113,8 +124,8 @@ function ProjectSlider() {
         (
             <section className='projects-slider-container'>
                 <div className='projects-slider'>
-                    {[...projectsData, ...projectsData].map(
-                        ({ image, title }, index) => (
+                    {doubledProjectsData.map(
+                        ({ image, title, link }, index) => (
                             <motion.div
                                 className='project-card'
                                 key={index}
@@ -122,7 +133,7 @@ function ProjectSlider() {
                                 whileInView={{ opacity: 1 }}
                                 viewport={{ once: true }}
                                 transition={{
-                                    duration: 0.35,
+                                    duration: 0.6,
                                     delay: index * 0.15,
                                     type: 'easeIn',
                                 }}
@@ -151,7 +162,7 @@ function ProjectSlider() {
                                             type: 'ease',
                                         }}
                                     >
-                                        {title}
+                                        <Link href={link}>{title}</Link>
                                     </motion.h3>
 
                                     <motion.div
@@ -177,4 +188,4 @@ function ProjectSlider() {
     );
 }
 
-export default ProjectSlider;
+export default React.memo(ProjectSlider);

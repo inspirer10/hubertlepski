@@ -5,10 +5,11 @@ function Header({ activeSection }) {
     const [isHeaderHovered, setIsHeaderHovered] = useState(false);
 
     const linksData = [
-        { name: 'Home' },
+        //   { name: 'Home' },
         { name: 'About' },
         { name: 'Technologies' },
         { name: 'Projects' },
+        { name: 'Experience' },
         { name: 'Contact' },
     ];
 

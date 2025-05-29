@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useMemo } from 'react';
+import { motion } from 'motion/react';
 import Image from 'next/image';
 
 function Technologies() {
@@ -22,6 +22,10 @@ function Technologies() {
         { src: '/uxui.png', alt: 'UX/UI' },
         { src: '/css.png', alt: 'CSS' },
     ];
+
+    const doubledImagesData = useMemo(() => {
+        return [...imagesData, ...imagesData];
+    }, []); //empty array bcs imagesData is static
 
     return (
         <section className='technologies_section' id='Technologies'>
@@ -53,26 +57,29 @@ function Technologies() {
 
             <div className='marquee-container'>
                 <div className='marquee'>
-                    {[...imagesData, ...imagesData].map(
-                        ({ src, alt }, index) => (
-                            <div key={index} className='technology-item'>
-                                <Image
-                                    src={`/technologies${src}`}
-                                    width={75}
-                                    height={75}
-                                    alt={alt}
-                                    loading='lazy'
-                                    placeholder='blur'
-                                    blurDataURL={`/technologies${src}`}
-                                />
-                                <span className='tech-name'>{alt}</span>
-                            </div>
-                        )
-                    )}
+                    {doubledImagesData.map(({ src, alt }, index) => (
+                        <div key={index} className='technology-item'>
+                            <Image
+                                src={`/technologies${src}`}
+                                width={75}
+                                height={75}
+                                alt={alt}
+                                loading='lazy'
+                                placeholder='blur'
+                                blurDataURL={`/technologies${src}`}
+                            />
+                            <span className='tech-name'>{alt}</span>
+                        </div>
+                    ))}
                 </div>
             </div>
+
+            <article className='technologies-wrapper'>
+                <div>HTML</div>
+                <div>CSS</div>
+            </article>
         </section>
     );
 }
 
-export default Technologies;
+export default React.memo(Technologies);

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import React from 'react';
 
 export default function SplitedText({ phrase }) {
@@ -7,12 +7,12 @@ export default function SplitedText({ phrase }) {
     return (
         <motion.p
             className='paragraph'
-            initial={{ opacity: 0, y: 35 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{
                 duration: 0.75,
-                delay: 0.15,
+                delay: 0.175,
                 type: 'ease',
             }}
         >
@@ -30,11 +30,12 @@ export default function SplitedText({ phrase }) {
                     }}
                     viewport={{
                         once: true,
-                        amount: 0.7,
+                        amount: 0.75,
                     }}
                     transition={{
                         duration: 0.5,
-                        delay: i * 0.0375,
+                        //delay: i * 0.0375,
+                        delay: i * 0.04,
                         type: 'ease',
                     }}
                 >

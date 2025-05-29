@@ -4,7 +4,7 @@ import { HiOutlineArrowUpRight as Arrow } from 'react-icons/hi2';
 import { LiaPhoneVolumeSolid as PhoneIcon } from 'react-icons/lia';
 import { IoMailOutline as MailIcon } from 'react-icons/io5';
 import { MdOutlineDownloading as DownloadIcon } from 'react-icons/md';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'motion/react';
 
 function Contact() {
     const container = useRef(null);
@@ -57,4 +57,4 @@ function Contact() {
     );
 }
 
-export default Contact;
+export default React.memo(Contact);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import SplitedText from './SplitedText';
 
 function AboutMe() {
@@ -104,4 +104,4 @@ function AboutMe() {
     );
 }
 
-export default AboutMe;
+export default React.memo(AboutMe);

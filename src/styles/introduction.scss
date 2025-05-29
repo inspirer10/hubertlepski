@@ -25,20 +25,20 @@
     }
     h2,
     h3 {
-        font-family: 'Geist', sans-serif;
+        font-family: 'Onest', sans-serif;
         font-size: calc(3.75rem + 4px);
         font-weight: 600;
         letter-spacing: -0.5px;
         line-height: 1.22;
-        background: linear-gradient(to right, #fff 10%, rgb(0, 0, 255));
+        background: linear-gradient(to right, #fff 7.5%, rgb(0, 0, 255));
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
     }
     h3 {
-        //font-family: 'SUSE', sans-serif;
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        font-size: 3.5rem;
+        font-family: 'Onest', sans-serif;
+        //font-size: 3.5rem;  dla plus jakarta sans
+        font-size: 3.75rem;
         letter-spacing: -1px;
         display: flex;
         align-items: center;
@@ -48,19 +48,16 @@
             width: 50px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease;
+            transition: transform 0.275s ease;
             &:hover {
-                transform: scale(1.05);
+                transform: scale(1.06);
             }
         }
     }
     .subHeading {
-        color: rgb(185, 185, 185);
-        margin: 1rem 0 2rem;
-        //font-family: 'Plus Jakarta Sans', sans-serif;
-        //font-family: 'Lexend Deca', sans-serif;
-        //font-family: 'Inter', sans-serif;
-        font-family: var(--font-inter);
+        color: rgb(200, 200, 200);
+        margin: 1.75rem 0 1.75rem;
+        font-family: 'Onest', sans-serif;
         font-size: 20px;
         font-weight: 500;
         line-height: 1.45;
@@ -99,6 +96,7 @@
             }
         }
         .projects {
+            font-family: 'Onest', sans-serif;
             padding: 25px;
             // background-color: #c8edc4;  //color: #218d0b;
             position: relative;
@@ -107,8 +105,8 @@
             background-color: rgb(0, 0, 125);
             color: lightblue;
             overflow: hidden;
-            transition: .275s ease-in-out;
             z-index: 10;
+            transition: .275s ease-in-out;
             &::before {
                 content: '';
                 position: absolute;

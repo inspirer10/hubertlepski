@@ -6,6 +6,7 @@ import '@/styles/projectsSlider.scss';
 import '@/styles/aboutMe.scss';
 import '@/styles/recentPhotos.scss';
 import '@/styles/technologies.scss';
+import '@/styles/experience.scss';
 import '@/styles/projects.scss';
 import '@/styles/contact.scss';
 

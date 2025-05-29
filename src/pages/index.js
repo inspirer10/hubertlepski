@@ -11,7 +11,10 @@ import Contact from '@/components/Contact';
 import InitialLoading from '@/components/InitialLoading';
 import ProjectSlider from '@/components/ProjectSlider';
 import SectionsObserver from '@/components/SectionObserver';
+import Experience from '@/components/Experience';
 
+//* LENIS
+import Lenis from 'lenis';
 /*
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -46,6 +49,8 @@ const merienda = Merienda({
 
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true);
+
+    //HANDLE LENIS SCROLL
     useEffect(() => {
         (async () => {
             setTimeout(() => {
@@ -54,6 +59,17 @@ export default function Home() {
                 console.log('Loading finished');
             }, 2300);
         })();
+
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        return () => {
+            lenis.destroy();
+        };
     }, []);
 
     return (
@@ -76,9 +92,9 @@ export default function Home() {
                         {isLoading && <InitialLoading />}
                     </AnimatePresence>
                     <Header activeSection={activeSection} />
-                    <div ref={refs.homeRef}>
-                        <Introduction />
-                    </div>
+
+                    <Introduction />
+
                     <ProjectSlider />
                     <div ref={refs.aboutRef}>
                         <About />
@@ -89,6 +105,9 @@ export default function Home() {
                     </div>
                     <div ref={refs.projectsRef}>
                         <Projects />
+                    </div>
+                    <div ref={refs.experienceRef}>
+                        <Experience />
                     </div>
                     <div ref={refs.contactRef}>
                         <Contact />

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import { useEffect } from 'react';
 
 const DownloadIcon = ({
     width = 20,
@@ -8,8 +9,17 @@ const DownloadIcon = ({
     strokeWidth = 2,
     stroke = '#000',
     controls,
+    isHovered,
     ...props
 }) => {
+    useEffect(() => {
+        if (isHovered) {
+            controls.start('animate');
+        } else {
+            controls.start('normal');
+        }
+    }, [isHovered, controls]);
+
     return (
         <div
             style={{

@@ -117,4 +117,4 @@ function Introduction() {
     );
 }
 
-export default Introduction;
+export default React.memo(Introduction);
