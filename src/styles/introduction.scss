@@ -36,22 +36,29 @@
         color: transparent;
     }
     h3 {
-        font-family: 'Onest', sans-serif;
+        // font-family: 'Onest', sans-serif;
         //font-size: 3.5rem;  dla plus jakarta sans
         font-size: 3.75rem;
         letter-spacing: -1px;
         display: flex;
         align-items: center;
         gap: 1rem;
+        width: fit-content;
+        background: linear-gradient(to right, #fff 40%, rgb(120, 120, 255));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        &:hover {
+            .icon_image {
+                transform: scale(1.06);
+            }
+        }
         .icon_image {
             height: 50px;
             width: 50px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.275s ease;
-            &:hover {
-                transform: scale(1.06);
-            }
         }
     }
     .subHeading {
@@ -129,5 +136,28 @@
                 }
             }
         }
+    }
+    .scroll-Suggestion {
+        position: absolute;
+        bottom: 0.25rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .icon {
+            font-size: 2rem;
+            color: #fff;
+            animation: moveMouse 2s forwards infinite;
+        }
+    }
+}
+
+@keyframes moveMouse {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(2.5px);
+    }
+    100% {
+        transform: translateY(-10px);
     }
 }

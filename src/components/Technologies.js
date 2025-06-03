@@ -75,8 +75,20 @@ function Technologies() {
             </div>
 
             <article className='technologies-wrapper'>
-                <div>HTML</div>
-                <div>CSS</div>
+                {imagesData.map(({ src, alt }, index) => (
+                    <div key={index} className='tech-card'>
+                        <p>{alt}</p>
+                        <Image
+                            src={`/technologies${src}`}
+                            width={150}
+                            height={150}
+                            alt={alt}
+                            loading='lazy'
+                            placeholder='blur'
+                            blurDataURL={`/technologies${src}`}
+                        />
+                    </div>
+                ))}
             </article>
         </section>
     );

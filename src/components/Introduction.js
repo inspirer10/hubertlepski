@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { motion, useAnimation } from 'motion/react';
 import { DownloadIcon } from './animatedIcons/DownloadIcon';
+import { BsMouse3 } from 'react-icons/bs';
 
 function Introduction() {
     const [isHovered, setIsHovered] = useState(false);
@@ -113,6 +114,10 @@ function Introduction() {
                     </motion.button>
                 </motion.div>
             </main>
+
+            <div className='scroll-Suggestion'>
+                <BsMouse3 className='icon' />
+            </div>
         </section>
     );
 }

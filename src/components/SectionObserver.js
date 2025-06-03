@@ -22,11 +22,12 @@ function SectionsObserver({ children }) {
 
     const getThreshold = (sectionName) => {
         const thresholds = {
+            // SCROLL - w dół : w górę
             // Home: scrollDirection === 'down' ? 0.33 : 0.2,
             About: scrollDirection === 'down' ? 0.6 : 0.175,
             Technologies: scrollDirection === 'down' ? 0.66 : 0.3,
-            Projects: scrollDirection === 'down' ? 0.66 : 0.3,
-            Experience: scrollDirection === 'down' ? 0.66 : 0.3,
+            Projects: scrollDirection === 'down' ? 0.25 : 0.15,
+            Experience: scrollDirection === 'down' ? 0.66 : 0.2,
             Contact: scrollDirection === 'down' ? 0.66 : 0.3,
         };
         return thresholds[sectionName];

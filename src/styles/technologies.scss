@@ -90,6 +90,62 @@
             }
         }
     }
+    .technologies-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        gap: 1rem;
+        gap: 1.25rem;
+        .tech-card {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background-color: rgba(35, 35, 35, 0.925);
+            border: 1px solid rgb(95, 95, 95);
+            border-radius: 14px;
+            padding: 0.75rem 0.5rem;
+            height: 10rem;
+            width: auto;
+            aspect-ratio: 2 / 1.45;
+            transition: .275s ease;
+            transition-delay: .075s;
+            &:hover {
+                background-color: rgba(40, 40, 40, 1);
+                border-color: rgb(150, 150, 150);
+                transform: translateY(-4px);
+                p {
+                    color: #FFF;
+                }
+                img {
+                    filter: grayscale(0%);
+                }
+            }
+            p {
+                font-family: 'Lexend Deca', sans-serif;
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 1;
+                user-select: none;
+                color: rgb(210, 210, 210);
+                transition: .275s ease;
+                transition-delay: .075s;
+            }
+            img {
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+                object-fit: contain;
+                height: 47.5%;
+                width: 47.5%;
+                filter: grayscale(50%);
+                transition: .275s ease;
+                transition-delay: .075s;
+            }
+        }
+    }
 }
 
 @keyframes marquee-animation {

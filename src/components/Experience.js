@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, useAnimation } from 'motion/react';
 
-import { CodeIcon } from './animatedIcons/CodeIcon';
 import { DownloadIcon } from './animatedIcons/DownloadIcon';
 
 function Experience() {

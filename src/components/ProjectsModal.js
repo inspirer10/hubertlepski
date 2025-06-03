@@ -95,7 +95,7 @@ function ProjectsModal({ modal, projects }) {
                                 key={`modal_${index}`}
                             >
                                 <Image
-                                    src={`/${src}`}
+                                    src={`/projects/${src}`}
                                     width={325}
                                     height={200}
                                     alt='project thumbnail'
