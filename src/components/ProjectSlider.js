@@ -29,7 +29,7 @@ function ProjectSlider() {
         {
             title: 'English Tutor',
             //! image: '/slider/english-tutor.jpg',
-            image: '/slider/subscriptions-tracker.jpg',
+            image: '/slider/musthave2.jpg',
             link: '',
         },
         {

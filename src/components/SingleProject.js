@@ -23,4 +23,4 @@ function SingleProject({ project, index, setModal }) {
     );
 }
 
-export default SingleProject;
+export default React.memo(SingleProject);

@@ -9,6 +9,7 @@ import '@/styles/technologies.scss';
 import '@/styles/experience.scss';
 import '@/styles/projects.scss';
 import '@/styles/contact.scss';
+import '@/styles/footer.scss';
 
 // Import fontów
 import {

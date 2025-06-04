@@ -15,6 +15,7 @@ import Experience from '@/components/Experience';
 
 //* LENIS
 import Lenis from 'lenis';
+import Footer from '@/components/Footer';
 /*
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -112,6 +113,7 @@ export default function Home() {
                     <div ref={refs.contactRef}>
                         <Contact />
                     </div>
+                    <Footer />
                 </>
             )}
         </SectionsObserver>

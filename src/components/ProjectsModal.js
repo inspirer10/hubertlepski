@@ -132,4 +132,4 @@ function ProjectsModal({ modal, projects }) {
     );
 }
 
-export default ProjectsModal;
+export default React.memo(ProjectsModal);
