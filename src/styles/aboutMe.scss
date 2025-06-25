@@ -1,10 +1,10 @@
 .aboutMe_section {
     //width: 80%;
     margin: 0vh auto 25vh;
+    padding-top: 15vh;
     .content-wrapper {
         width: 80%;
         margin: 0 auto;
-        padding-top: 15vh;
         h5 {
             //font-family: 'Lexend Deca', sans-serif;
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -27,15 +27,22 @@
                 justify-content: center;
                 align-items: flex-start;
                 .paragraph {
-                    //max-width: 1280px;
-                    width: 40%;
-                    margin-top: 6rem;
                     font-size: 20px;
+                    font-size: 2.5rem;
                     font-weight: 500;
-                    line-height: 1.4;
+                    //font-size: 60px;
+                    //font-size: 2.25rem;
+                    //line-height: 1;
+                    //line-height: 1.3;
+                    //padding: 40px;
+                    //max-width: 1280px;
+                    color: rgba(225, 225, 225, 1);
+                    width: 75%;
+                    margin-top: 25vh;
                     text-wrap: pretty;
                     text-align: left;
-                    color: rgba(225, 225, 225, 1);
+                    display: flex;
+                    flex-wrap: wrap;
                     &:first-of-type {
                         margin-top: 1rem;
                     }
@@ -43,13 +50,20 @@
                     &:nth-of-type(4) {
                         text-align: right;
                         align-self: flex-end;
+                        justify-content: flex-end;
                     }
                     .word {
-                        position: relative;
                         // font-family: 'Inter', sans-serif;
                         //font-family: 'Geist', sans-serif;
                         font-family: 'Plus Jakarta Sans', sans-serif;
                         font-family: 'Onest', sans-serif;
+                        position: relative;
+                        margin-right: 10px;
+                        margin-top: 3px;
+                        .shadow {
+                            position: absolute;
+                            opacity: 20%;
+                        }
                     }
                 }
             }
@@ -59,7 +73,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
-            margin: 7.5rem 0 0;
+            margin: 20vh 0 0;
             h5 {
                 font-family: "SUSE", sans-serif;
                 font-size: 2.25rem;
@@ -72,7 +86,7 @@
                 justify-content: flex-start;
             }
             aside {
-                width: 85%;
+                width: 80%;
                 display: flex;
                 justify-content: flex-end;
                 flex-wrap: wrap;
@@ -91,13 +105,14 @@
                     margin-bottom: 8px;
                     border: 1px solid rgba(125, 125, 125, 0.25);
                     user-select: none;
-                    transition: .4s cubic-bezier(.33, 1, .68, 1);
+                    transition: .35s cubic-bezier(.33, 1, .68, 1);
                     cursor: pointer;
                     .primary {
                         font-family: "Barlow", sans-serif;
                         top: 0;
                         position: relative;
-                        transition: top .4s cubic-bezier(.33, 1, .68, 1);
+                        will-change: top;
+                        transition: top .35s cubic-bezier(.33, 1, .68, 1);
                     }
                     .secondary {
                         position: absolute;
@@ -108,7 +123,8 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        transition: top .4s cubic-bezier(.33, 1, .68, 1);
+                        will-change: top;
+                        transition: top .35s cubic-bezier(.33, 1, .68, 1);
                         p {
                             font-family: "SUSE", sans-serif;
                             position: absolute;
@@ -117,7 +133,7 @@
                             width: 60%;
                             height: 100%;
                             border-radius: 50%;
-                            transition: all .4s cubic-bezier(.33, 1, .68, 1);
+                            transition: all .35s cubic-bezier(.33, 1, .68, 1);
                         }
                     }
                     &:hover {

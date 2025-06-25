@@ -16,6 +16,7 @@ import Experience from '@/components/Experience';
 //* LENIS
 import Lenis from 'lenis';
 import Footer from '@/components/Footer';
+import TestComponent from '@/components/TestComponent';
 /*
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -92,6 +93,7 @@ export default function Home() {
                     <AnimatePresence mode='wait'>
                         {isLoading && <InitialLoading />}
                     </AnimatePresence>
+
                     <Header activeSection={activeSection} />
 
                     <Introduction />
@@ -104,6 +106,9 @@ export default function Home() {
                     <div ref={refs.techRef}>
                         <Technologies />
                     </div>
+
+                    <TestComponent />
+
                     <div ref={refs.projectsRef}>
                         <Projects />
                     </div>

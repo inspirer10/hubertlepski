@@ -61,8 +61,8 @@ function Experience() {
                     type: 'ease',
                 }}
             >
-                Practical experience I’ve gained through various projects and
-                jobs and courses
+                Practical experience I’ve gained through various projects, jobs
+                and courses
             </motion.p>
 
             <div className='experience-container'>
@@ -71,15 +71,29 @@ function Experience() {
                         <motion.div
                             key={index}
                             className='experience-item'
-                            initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
+                            whileHover={{
+                                x: 14,
+                                transition: {
+                                    duration: 0.35,
+                                    delay: 0.075,
+                                    type: 'ease',
+                                },
+                            }}
+                            animate={{
+                                x: 0,
+                                transition: {
+                                    duration: 0.35,
+                                    delay: 0.3,
+                                    type: 'ease',
+                                },
+                            }}
                             transition={{
-                                duration: 0.7,
-                                delay: 0.15 * index,
-                                type: 'spring',
-                                stiffness: 100,
-                                damping: 12,
+                                duration: 0.55,
+                                delay: index * 0.15,
+                                type: 'easeIn',
                             }}
                         >
                             <p className='time'>{time}</p>

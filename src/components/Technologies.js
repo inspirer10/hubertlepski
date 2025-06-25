@@ -1,26 +1,33 @@
+import Image from 'next/image';
 import React, { useMemo } from 'react';
 import { motion } from 'motion/react';
-import Image from 'next/image';
 
 function Technologies() {
     const imagesData = [
+        { src: '/html.png', alt: 'HTML' },
+        { src: '/css.png', alt: 'CSS' },
+        { src: '/sass.png', alt: 'Sass' },
+        { src: '/git.png', alt: 'Git' },
+        { src: '/rwd.png', alt: 'RWD' },
+        { src: '/vsc.png', alt: 'VSC' },
+        //* second row
         { src: '/js.png', alt: 'JavaScript' },
         { src: '/react.png', alt: 'React' },
-        { src: '/html.png', alt: 'HTML' },
+        { src: '/zustand.jpg', alt: 'Zustand' },
         { src: '/redux.png', alt: 'Redux' },
         { src: '/next.png', alt: 'Next.js' },
-        { src: '/express.png', alt: 'Express' },
         { src: '/mui.png', alt: 'MUI' },
-        { src: '/sass.png', alt: 'Sass' },
-        { src: '/rwd.png', alt: 'RWD' },
+        //* third row
         { src: '/ts.png', alt: 'TypeScript' },
-        { src: '/git.png', alt: 'Git' },
         { src: '/node.png', alt: 'Node.js' },
         { src: '/express.png', alt: 'Express' },
         { src: '/mongoDB.png', alt: 'MongoDB' },
-        { src: '/vsc.png', alt: 'VSC' },
         { src: '/uxui.png', alt: 'UX/UI' },
-        { src: '/css.png', alt: 'CSS' },
+        { src: '/copilot.png', alt: 'Copilot' },
+        //* fourth row
+        { src: '/tailwind.png', alt: 'Tailwind' },
+        { src: '/bootstrap.png', alt: 'Bootstrap' },
+        { src: '/router.png', alt: 'React Router' },
     ];
 
     const doubledImagesData = useMemo(() => {
@@ -76,7 +83,36 @@ function Technologies() {
 
             <article className='technologies-wrapper'>
                 {imagesData.map(({ src, alt }, index) => (
-                    <div key={index} className='tech-card'>
+                    <motion.div
+                        key={index}
+                        className='tech-card'
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            duration: 0.5,
+                            delay: index * 0.1,
+                            type: 'ease',
+                        }}
+                        whileHover={{
+                            transform: 'translateY(-5px)',
+                            backgroundColor: 'rgba(40, 40, 40, 1)',
+                            transition: {
+                                duration: 0.25,
+                                type: 'ease',
+                                delay: 0.075,
+                            },
+                        }}
+                        animate={{
+                            transform: 'translateY(0px)',
+                            backgroundColor: 'rgba(30, 30, 30, 0.925);',
+                            transition: {
+                                duration: 0.25,
+                                type: 'ease',
+                                delay: 0.075,
+                            },
+                        }}
+                    >
                         <p>{alt}</p>
                         <Image
                             src={`/technologies${src}`}
@@ -87,7 +123,7 @@ function Technologies() {
                             placeholder='blur'
                             blurDataURL={`/technologies${src}`}
                         />
-                    </div>
+                    </motion.div>
                 ))}
             </article>
         </section>

@@ -1,12 +1,12 @@
 .introduction_section {
-    height: 100vh;
+    height: 125vh;
     //background-image: url('/bgc2.png');
     background-image: url('/bgc2.jpg');
     background-size: cover;
     background-position: bottom;
     position: relative;
     will-change: transform; // For elements that will animate
-    transform: translateZ(0); // Force GPU acceleration
+    //transform: translateZ(0); // Force GPU acceleration
     backface-visibility: hidden;
     main {
         z-index: 10;
@@ -14,14 +14,18 @@
         padding-top: 12.5vh;
         margin: 0 auto;
         width: 80%;
+        display: flex;
+        //align-items: center;
+        flex-direction: column;
     }
     .avatar_image {
         object-fit: cover;
         border-radius: 50%;
-        height: 250px;
-        width: 250px;
-        aspect-ratio: 1/1;
-        margin-bottom: 1.25rem;
+        height: 225px;
+        width: 225px;
+        aspect-ratio: 1 / 1;
+        margin-bottom: 1rem;
+        background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgb(3, 3, 88) 35%, rgb(18, 168, 198) 100%);
     }
     h2,
     h3 {
@@ -57,8 +61,9 @@
             height: 50px;
             width: 50px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.275s ease;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+            transition: 0.3s ease;
+            will-change: transform;
         }
     }
     .subHeading {
@@ -95,7 +100,7 @@
             display: flex;
             align-items: center;
             border: 1px solid transparent;
-            transition: .18s ease-in-out;
+            transition: .3s ease;
             &:hover {
                 background-color: rgb(30, 30, 30);
                 color: #fff;
@@ -113,7 +118,7 @@
             color: lightblue;
             overflow: hidden;
             z-index: 10;
-            transition: .275s ease-in-out;
+            transition: .3s ease;
             &::before {
                 content: '';
                 position: absolute;
@@ -125,7 +130,7 @@
                 border-radius: 50%;
                 background-color: lightblue;
                 z-index: -1;
-                transition: .3s ease-in-out;
+                transition: .35s ease;
             }
             &:hover {
                 //border-color: rgb(45, 154, 201);
@@ -139,7 +144,7 @@
     }
     .scroll-Suggestion {
         position: absolute;
-        bottom: 0.25rem;
+        bottom: calc(25vh + 0.25rem);
         left: 50%;
         transform: translate(-50%, -50%);
         .icon {

@@ -2,7 +2,7 @@
     width: 80%;
     margin: 0 auto;
     padding-top: 15vh;
-    margin-bottom: 17.5vh;
+    padding-bottom: 17.5vh;
     // to remove
     // height: 100vh;
     h5 {
@@ -11,9 +11,8 @@
         font-family: 'Inter', sans-serif;
         font-family: 'Onest', sans-serif;
         letter-spacing: 0.25px;
-        font-size: 2.25rem;
+        font-size: 3rem;
         font-weight: 600;
-        margin-bottom: 0.25rem;
     }
     .subHeading {
         //font-family: 'Geist', sans-serif;
@@ -23,7 +22,7 @@
         font-size: 20px;
         font-weight: 300;
         font-weight: 400;
-        line-height: 1.35;
+        line-height: 1.3;
         width: 50%;
         color: rgb(125, 125, 125);
         text-wrap: balance;
@@ -37,27 +36,31 @@
         &::before,
         &::after {
             content: "";
-            height: 100%;
-            pointer-events: none;
             position: absolute;
-            top: 0;
-            width: 12.5%;
+            pointer-events: none;
             z-index: 1;
-            background: linear-gradient(270deg, hsla(0, 0%, 100%, 0), rgb(12, 12, 12));
+            top: 0;
             left: 0;
+            height: 100%;
+            width: 12.5%;
+            background: linear-gradient(270deg, hsla(0, 0%, 100%, 0), rgb(12, 12, 12));
         }
         &::after {
-            background: linear-gradient(90deg, hsla(0, 0%, 100%, 0), rgb(12, 12, 12));
-            right: 0;
             left: unset;
+            right: 0;
+            background: linear-gradient(90deg, hsla(0, 0%, 100%, 0), rgb(12, 12, 12));
         }
         .marquee {
             display: flex;
             flex-direction: row;
             width: max-content;
-            animation: marquee-animation 24s linear infinite forwards;
             gap: 6rem;
             padding: 1rem;
+            animation: marquee-animation 28s linear infinite forwards;
+            &:hover {
+                animation-play-state: paused;
+                // animation-duration: 120s;
+            }
             .technology-item {
                 display: flex;
                 flex-direction: column;
@@ -65,16 +68,14 @@
                 gap: 0.5rem;
                 padding: 0.5rem;
                 cursor: pointer;
-                transition: .35s ease;
-                &:hover {
-                    transform: scale(1.15);
-                    .tech-name {
-                        color: #FFF;
-                    }
-                }
+                will-change: transform;
+                transition: transform .3s ease;
+                transition-delay: 0.075s;
                 img {
+                    object-fit: contain;
                     filter: grayscale(65%);
-                    transition: 0.35s ease;
+                    transition: 0.3s ease;
+                    transition-delay: 0.075s;
                     &:hover {
                         filter: grayscale(0%);
                     }
@@ -87,6 +88,14 @@
                     opacity: 0.75;
                     text-wrap: nowrap;
                     letter-spacing: -0.25px;
+                    transition: .3s ease;
+                    transition-delay: 0.075s;
+                }
+                &:hover {
+                    transform: scale(1.14);
+                    .tech-name {
+                        color: #FFF;
+                    }
                 }
             }
         }
@@ -99,6 +108,7 @@
         gap: 1rem;
         gap: 1.25rem;
         .tech-card {
+            flex-grow: 2;
             z-index: 1;
             position: relative;
             display: flex;
@@ -111,8 +121,8 @@
             height: 10rem;
             width: auto;
             aspect-ratio: 2 / 1.45;
-            transition: .275s ease;
-            transition-delay: .075s;
+            //transition: .275s ease;
+            //transition-delay: .075s;
             &::before {
                 content: '';
                 position: absolute;
@@ -131,8 +141,8 @@
                 z-index: -2;
             }
             &:hover {
-                background-color: rgba(40, 40, 40, 1);
-                transform: translateY(-4px);
+                //background-color: rgba(40, 40, 40, 1);
+                //transform: translateY(-4px);
                 p {
                     color: #FFF;
                 }

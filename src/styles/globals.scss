@@ -39,3 +39,25 @@ img,
 button {
     user-select: none;
 }
+
+.test-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 300px;
+    gap: 20vw;
+    margin-bottom: 300px;
+    .wrapper {
+        font-size: 4vw;
+        position: relative;
+        .line-mask {
+            margin: 0px;
+            font-weight: 700;
+            overflow: hidden;
+            p {
+                display: block;
+                margin: 0;
+            }
+        }
+    }
+}

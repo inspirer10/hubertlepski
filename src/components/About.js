@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import SplitedText from './SplitedText';
+//import SplitedText from './SplitedText';
+import Character from './Character';
 
 function AboutMe() {
     const technologies = [
@@ -14,8 +15,9 @@ function AboutMe() {
         { name: 'ts', backgroundColor: 'royalblue', color: '#FFF' },
         { name: 'react router', backgroundColor: '#272425', color: '#FFF' },
         {
-            name: 'redux toolkit',
-            backgroundColor: '#764ABE',
+            name: 'Zustand',
+            //backgroundColor: '#764ABE',
+            backgroundColor: 'rgb(175,75,0)',
             color: '#FFF',
         },
         { name: 'node', backgroundColor: '#8AC600', color: '#000' },
@@ -27,6 +29,7 @@ function AboutMe() {
         { name: 'ux/ui', backgroundColor: '#000', color: '#FFF' },
         { name: 'vsc', backgroundColor: '#1F9CEF', color: '#FFF' },
     ];
+
     const phrase1 = `I am open to various opportunities and eager to learn new technologies, frameworks, and tools. I am flexible in working both remotely and in-office, and willing to relocate as needed`;
     const phrase2 = `I enjoy meeting new people and have no issues communicating in English, allowing me to adapt easily to different work environments and contribute effectively to diverse teams`;
     const phrase3 = `I am a creative developer with a strong can-do attitude who loves solving problems and finding new solutions. I learn quickly, work well in a team, and manage my time effectively`;
@@ -48,38 +51,21 @@ function AboutMe() {
                     About Me
                 </motion.h5>
 
-                <div className='text-container'>
-                    <article
-                        className='description_text'
-                        //initial={{ opacity: 0, x: -55 }}
-                        // whileInView={{ opacity: 1, x: 0 }}
-                        //viewport={{ once: true }}
-                        //transition={{
-                        //  duration: 1.1,
-                        //    delay: 0.375,
-                        //    type: 'ease',
-                        //  }}
-                    >
-                        {/*
-                        <p className='splitted'>
-                            <span>{phrase1}</span>
-                        </p>
-                        <p className='splitted'>
-                            <span>{phrase2}</span>
-                        </p>
-
-                        <p className='splitted'>
-                            <span>{phrase3}</span>
-                        </p>
-
-                        <p className='splitted'>
-                            <span>{phrase4}</span>
-                        </p>  */}
-
+                {/* <div className='text-container'>
+                    <article className='description_text'>
                         <SplitedText phrase={phrase1} />
                         <SplitedText phrase={phrase2} />
                         <SplitedText phrase={phrase3} />
                         <SplitedText phrase={phrase4} />
+                    </article>
+                </div> */}
+
+                <div className='text-container'>
+                    <article className='description_text'>
+                        <Character paragraph={phrase1} />
+                        <Character paragraph={phrase2} />
+                        <Character paragraph={phrase3} />
+                        <Character paragraph={phrase4} />
                     </article>
                 </div>
 

@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import ProjectsModal from './ProjectsModal';
 import SingleProject from './SingleProject';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function Projects() {
     //projekty - tablia obiektów
@@ -230,6 +231,56 @@ function Projects() {
             >
                 Feel free to take a look at some of my projects
             </motion.p>
+
+            <div className='projects-spotlight-container'>
+                <div className='project-wrapper'>
+                    <div className='project-card'>
+                        <Image
+                            src={'/slider/musthave2.jpg'}
+                            height={600}
+                            width={600}
+                            alt='project spotlight thumbnail'
+                        />
+                    </div>
+                    <p>Webstore</p>
+                </div>
+
+                <div className='project-wrapper'>
+                    <div className='project-card'>
+                        <Image
+                            src={'/pizza.jpg'}
+                            height={600}
+                            width={600}
+                            alt='project spotlight thumbnail'
+                        />
+                    </div>
+                    <p>Subscriptions Tracker</p>
+                </div>
+
+                <div className='project-wrapper'>
+                    <div className='project-card'>
+                        <Image
+                            src={'/mona.jpg'}
+                            height={600}
+                            width={600}
+                            alt='project spotlight thumbnail'
+                        />
+                    </div>
+                    <p>English Tutor</p>
+                </div>
+
+                <div className='project-wrapper'>
+                    <div className='project-card'>
+                        <Image
+                            src={'/avatar.jpg'}
+                            height={600}
+                            width={600}
+                            alt='project spotlight thumbnail'
+                        />
+                    </div>
+                    <p>Food Expiration Reminder</p>
+                </div>
+            </div>
 
             <article className='projects-gallery'>
                 <div className='projects-gallery-container'>

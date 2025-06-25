@@ -129,14 +129,14 @@ function ProjectSlider() {
                             <motion.div
                                 className='project-card'
                                 key={index}
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                viewport={{ once: true }}
+                                //initial={{ opacity: 0 }}
+                                //whileInView={{ opacity: 1 }}
+                                //viewport={{ once: true }}
                                 whileHover={{
                                     y: -10,
                                     borderColor: 'rgba(255, 255, 255, 0.225)',
                                     transition: {
-                                        duration: 0.275,
+                                        duration: 0.4,
                                         type: 'ease',
                                         //ease: [0.33, 1, 0.68, 1], // Custom easing
                                     },
@@ -145,16 +145,16 @@ function ProjectSlider() {
                                     y: 0,
                                     borderColor: 'rgba(255, 255, 255, 0.1)',
                                     transition: {
-                                        duration: 0.275,
+                                        duration: 0.4,
                                         //ease: [0.33, 1, 0.68, 1],
                                         type: 'ease',
                                     },
                                 }}
-                                transition={{
-                                    duration: 0.6,
-                                    delay: index * 0.15,
-                                    type: 'easeIn',
-                                }}
+                                //transition={{
+                                //    duration: 0.6,
+                                //    delay: index * 0.15,
+                                //    type: 'easeIn',
+                                //</div>}}
                             >
                                 <div className='image-wrapper'>
                                     <Image
