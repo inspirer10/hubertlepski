@@ -28,6 +28,8 @@ function Technologies() {
         { src: '/tailwind.png', alt: 'Tailwind' },
         { src: '/bootstrap.png', alt: 'Bootstrap' },
         { src: '/router.png', alt: 'React Router' },
+        { src: '/framerMotion.png', alt: 'Framer Motion' },
+        { src: '/gitFlow.jpg', alt: 'Git Flow' },
     ];
 
     const doubledImagesData = useMemo(() => {
@@ -90,12 +92,12 @@ function Technologies() {
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{
-                            duration: 0.5,
-                            delay: index * 0.1,
+                            duration: 0.6,
+                            delay: index * 0.0825,
                             type: 'ease',
                         }}
                         whileHover={{
-                            transform: 'translateY(-5px)',
+                            transform: 'translateY(-6px)',
                             backgroundColor: 'rgba(40, 40, 40, 1)',
                             transition: {
                                 duration: 0.25,

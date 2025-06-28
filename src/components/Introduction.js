@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { motion, useAnimation } from 'motion/react';
 import { DownloadIcon } from './animatedIcons/DownloadIcon';
 import { BsMouse3 } from 'react-icons/bs';
@@ -8,22 +8,28 @@ function Introduction() {
     const [isHovered, setIsHovered] = useState(false);
     const controls = useAnimation();
 
+    const handleContactClick = useCallback((e, sectionId) => {
+        e.preventDefault();
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, []);
+
     return (
         <section className='introduction_section' id='Home'>
             <main>
                 <Image
-                    src={'/avatar.png'}
-                    //src={'/avatar.jpg'}
-                    height={350}
-                    width={350}
                     className='avatar_image'
-                    alt='person avatar'
-                    priority={false}
-                    loading='lazy'
-                    placeholder='blur'
+                    src={'/avatar.png'}
+                    height={275}
+                    width={275}
+                    priority={true}
+                    //loading='lazy'
                     quality={100}
+                    placeholder='blur'
                     blurDataURL='/avatar.png'
-                    //blurDataURL='/avatar.jpg'
+                    alt='person avatar'
                 />
                 <motion.h2
                     initial={{ opacity: 0, y: 25 }}
@@ -109,7 +115,11 @@ function Introduction() {
                             controls={controls}
                         />
                     </motion.button>
-                    <motion.button className='projects'>
+
+                    <motion.button
+                        className='projects'
+                        onClick={(e) => handleContactClick(e, 'Contact')}
+                    >
                         Available for new projects
                     </motion.button>
                 </motion.div>

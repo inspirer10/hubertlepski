@@ -13,8 +13,36 @@ function Projects() {
             icon: '👗',
             color: 'linear-gradient(#000, #000)',
             src: 'webstoreScroll.jpg',
+            srcX: 'webstoreScroll.jpg',
             url: 'https://musthave.vercel.app/',
             id: 1,
+        },
+
+        {
+            name: 'English Tutor',
+            icon: '👩🏽‍🏫',
+            color: 'linear-gradient(to right top, #990087, #CE2B37)',
+            src: 'englishTutor3.png',
+            url: 'https://julia-grzesiek.vercel.app/',
+            id: 33,
+        },
+
+        {
+            name: 'Food Master',
+            icon: '🥗',
+            color: 'linear-gradient(to right top, #135200, #ffffff)',
+            src: 'foodMaster.png',
+            url: 'https://food-master-hl.vercel.app/',
+            id: 44,
+        },
+
+        {
+            name: 'Rent Manager',
+            icon: '🏘️',
+            color: 'linear-gradient(to right top, #00042f, #0015ff)',
+            src: 'rentManager.png',
+            url: 'https://rent-manager-hl.vercel.app/',
+            id: 33,
         },
 
         {
@@ -36,18 +64,9 @@ function Projects() {
         },
 
         {
-            name: 'Astra NFT',
-            icon: '💸',
-            color: 'linear-gradient(to right top, #9f4fec, #7f43cc, #6138ac, #452b8d, #2c1f6e, #221a60, #181453, #0e0f46, #0e0f46, #0e0f46, #0e0f46, #0e0f46)',
-            src: 'astraNFTScroll.jpg',
-            url: 'https://astra-nft-sigma.vercel.app/',
-            id: 11,
-        },
-
-        {
             name: 'Expiration Reminder',
             icon: '🥑',
-            color: 'linear-gradient(to right top, #360522, #050b36)',
+            color: 'linear-gradient(to left bottom, #5a9d31, #0a3500)',
             src: 'expirationReminderScroll.png',
             url: 'https://inspirer10.github.io/expiration-reminder/',
             id: 5,
@@ -56,7 +75,7 @@ function Projects() {
         {
             name: 'Subscriptions Tracker',
             icon: '📊',
-            color: 'linear-gradient(to right top, #c8c8c8, #a9a9a9)',
+            color: 'linear-gradient(to right top, #ca3f46, #FFF0DE)',
             src: 'subscriptionsTrackerScroll.png',
             url: 'https://inspirer10.github.io/subscriptions-tracker',
             id: 6,
@@ -65,10 +84,19 @@ function Projects() {
         {
             name: 'Sushi Page',
             icon: '🍣',
-            color: 'linear-gradient(to right top, #B0454A, #FFF0DE)',
+            color: 'linear-gradient(to right top, #ca3f46, #FFF0DE)',
             src: 'sushiScroll.jpg',
             url: 'https://inspirer10.github.io/sushi-page/',
-            id: 13,
+            id: 7,
+        },
+
+        {
+            name: 'Astra NFT',
+            icon: '💸',
+            color: 'linear-gradient(to right top, #9f4fec, #7f43cc, #6138ac, #452b8d, #2c1f6e, #221a60, #181453, #0e0f46, #0e0f46, #0e0f46, #0e0f46, #0e0f46)',
+            src: 'astraNFTScroll.jpg',
+            url: 'https://astra-nft-sigma.vercel.app/',
+            id: 4,
         },
 
         {
@@ -77,7 +105,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #000, rgb(20, 20, 20))',
             src: 'astraCrypto-scroll.png',
             url: 'https://astra-crypto.vercel.app/',
-            id: 12,
+            id: 8,
         },
 
         {
@@ -86,7 +114,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #38ffb6, #5facff)',
             src: 'clinifyScroll.jpg',
             url: 'https://clinify-inspirer10.vercel.app/',
-            id: 8,
+            id: 9,
         },
 
         {
@@ -95,7 +123,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #e38643, #fff)',
             src: 'myHome-scroll.jpg',
             url: 'https://inspirer10.github.io/my-home/',
-            id: 19,
+            id: 10,
         },
 
         {
@@ -104,7 +132,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #090752, #fff)',
             src: 'kanban-scroll.jpg',
             url: 'https://draggable-kanban-board-topaz.vercel.app/',
-            id: 23,
+            id: 11,
         },
 
         {
@@ -113,7 +141,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #000000, #371c1f, #6a312c, #9b4d30, #c47229, #c47229, #c47229, #c47229, #9b4d30, #6a312c, #371c1f, #000000)',
             src: 'volcanic-wonderScroll.jpg',
             url: 'https://volcanic-wonder.vercel.app/',
-            id: 14,
+            id: 12,
         },
 
         {
@@ -122,7 +150,7 @@ function Projects() {
             color: 'linear-gradient(to right, #a5d0ff, #007bff)',
             src: 'weatherApp.jpg',
             url: 'https://inspirer10.github.io/weather-app/',
-            id: 7,
+            id: 13,
         },
 
         {
@@ -131,7 +159,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #ffffff, #e6e2ff, #cbc6ff, #adabff, #8a91ff, #7886ff, #637bff, #4870ff, #4870ff, #4870ff, #4870ff, #4870ff)',
             src: 'cars-rentalScroll.jpg',
             url: 'https://cars-rental-inspirer10.vercel.app/',
-            id: 15,
+            id: 14,
         },
 
         {
@@ -140,7 +168,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #000000, #331019, #620f24, #920728, #c20023, #c20023, #c20023, #c20023, #920728, #620f24, #331019, #000000)',
             src: 'fastFood-scroll.jpg',
             url: 'https://fast-food-taupe.vercel.app/',
-            id: 9,
+            id: 15,
         },
 
         {
@@ -149,10 +177,10 @@ function Projects() {
             color: 'linear-gradient(to right top, #ffa600e0, #cecece)',
             src: 'auraLiving-scroll.jpg',
             url: 'https://aura-living.vercel.app/',
-            id: 22,
+            id: 16,
         },
 
-        {
+        /* {
             name: 'Pizza Restaurant',
             icon: '🍕',
             color: 'linear-gradient(to right top, #ff0000, #ffee00)',
@@ -167,8 +195,8 @@ function Projects() {
             color: 'linear-gradient(to right top, #c8c8c8, #c8c8c8)',
             src: 'marle-scroll.png',
             url: 'https://inspirer10.github.io/marledipawele/',
-            id: 10,
-        },
+            id: 18,
+        }, */
 
         {
             name: 'Feed India',
@@ -176,16 +204,16 @@ function Projects() {
             color: 'linear-gradient(to right, #0d1803, #0d1803)',
             src: 'feed-india.jpg',
             url: 'https://inspirer10.github.io/feed-india/',
-            id: 4,
+            id: 19,
         },
-
+        /*
         {
             name: 'Tic Tac Toe',
             icon: '🎲',
             color: 'linear-gradient(to right top, #58FF00, #241583)',
             src: 'ticTacToe-scroll.png',
             url: 'https://inspirer10.github.io/TicTacToe/',
-            id: 16,
+            id: 20,
         },
 
         {
@@ -194,8 +222,8 @@ function Projects() {
             color: 'linear-gradient(to right top, #cecece, #cecece)',
             src: 'hangmanScroll.png',
             url: 'https://inspirer10.github.io/hangman-react/',
-            id: 18,
-        },
+            id: 21,
+        },*/
     ];
 
     const [modal, setModal] = useState({
@@ -233,52 +261,64 @@ function Projects() {
             </motion.p>
 
             <div className='projects-spotlight-container'>
-                <div className='project-wrapper'>
-                    <div className='project-card'>
+                <div className='project-card'>
+                    <div className='image-wrapper'>
                         <Image
-                            src={'/slider/musthave2.jpg'}
+                            //src={'/slider/musthave2.jpg'}
+                            src={'/projects/thumbnails/musthave-thumbnail.png'}
                             height={600}
                             width={600}
+                            quality={100}
                             alt='project spotlight thumbnail'
                         />
                     </div>
-                    <p>Webstore</p>
+                    <p>MUSTHAVE Webstore</p>
                 </div>
 
-                <div className='project-wrapper'>
-                    <div className='project-card'>
+                <div className='project-card'>
+                    <div className='image-wrapper'>
                         <Image
-                            src={'/pizza.jpg'}
+                            srcX={'/mona.jpg'}
+                            src={
+                                '/projects/thumbnails/englishTutor-thumbnail.png'
+                            }
                             height={600}
                             width={600}
-                            alt='project spotlight thumbnail'
-                        />
-                    </div>
-                    <p>Subscriptions Tracker</p>
-                </div>
-
-                <div className='project-wrapper'>
-                    <div className='project-card'>
-                        <Image
-                            src={'/mona.jpg'}
-                            height={600}
-                            width={600}
+                            quality={100}
                             alt='project spotlight thumbnail'
                         />
                     </div>
                     <p>English Tutor</p>
                 </div>
 
-                <div className='project-wrapper'>
-                    <div className='project-card'>
+                <div className='project-card'>
+                    <div className='image-wrapper'>
                         <Image
-                            src={'/avatar.jpg'}
+                            src={
+                                '/projects/thumbnails/rent-manager-thumbnail.png'
+                            }
                             height={600}
                             width={600}
+                            quality={100}
                             alt='project spotlight thumbnail'
                         />
                     </div>
                     <p>Food Expiration Reminder</p>
+                </div>
+
+                <div className='project-card'>
+                    <div className='image-wrapper'>
+                        <Image
+                            src={
+                                '/projects/thumbnails/food-master-thumbnail.png'
+                            }
+                            height={600}
+                            width={600}
+                            quality={100}
+                            alt='project spotlight thumbnail'
+                        />
+                    </div>
+                    <p>Food Master</p>
                 </div>
             </div>
 

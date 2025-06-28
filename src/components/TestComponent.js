@@ -25,12 +25,11 @@ function TestComponent() {
 export function MaskText() {
     const wrapper = useRef(null);
     const { ref, inView } = useInView({
-        //threshold: 0.1, // Poprawiony próg widoczności
+        //threshold: 0.1,
         triggerOnce: true,
         rootMargin: '-75%', // Opóźnienie aktywacji
     });
 
-    // Połącz refy w jeden element
     const setRefs = (element) => {
         wrapper.current = element;
         ref(element);
@@ -50,17 +49,21 @@ export function MaskText() {
 
     return (
         <div ref={setRefs} className='wrapper'>
-            {phrases.map((phrase, index) => {
+            {phrases.map((phrase, phraseIndex) => {
+                const words = phrase.split(' ');
                 return (
-                    <div key={index} className='line-mask'>
-                        <motion.p
-                            custom={index}
-                            variants={animation}
-                            initial='initial'
-                            animate={inView ? 'enter' : 'initial'}
-                        >
-                            {phrase}
-                        </motion.p>
+                    <div key={phraseIndex} className='line-mask'>
+                        {words.map((word, wordIndex) => (
+                            <motion.p
+                                key={wordIndex}
+                                custom={wordIndex}
+                                variants={animation}
+                                initial='initial'
+                                animate={inView ? 'enter' : 'initial'}
+                            >
+                                {word}
+                            </motion.p>
+                        ))}
                     </div>
                 );
             })}

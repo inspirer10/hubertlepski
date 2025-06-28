@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { CodeIcon } from './animatedIcons/CodeIcon';
+import Link from 'next/link';
 
 function Header({ activeSection }) {
     const [isHeaderHovered, setIsHeaderHovered] = useState(false);
@@ -30,7 +31,7 @@ function Header({ activeSection }) {
             <CodeIcon isHovered={isHeaderHovered} />
             <nav>
                 {linksData.map(({ name }, index) => (
-                    <a
+                    <Link
                         key={index}
                         href={`#${name}`}
                         onClick={(e) => handleClick(e, name)}
@@ -39,7 +40,7 @@ function Header({ activeSection }) {
                         }
                     >
                         {name}
-                    </a>
+                    </Link>
                 ))}
             </nav>
         </header>

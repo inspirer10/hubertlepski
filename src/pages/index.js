@@ -107,7 +107,7 @@ export default function Home() {
                         <Technologies />
                     </div>
 
-                    <TestComponent />
+                    {/* <TestComponent />  */}
 
                     <div ref={refs.projectsRef}>
                         <Projects />

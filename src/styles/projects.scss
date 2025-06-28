@@ -11,7 +11,7 @@
         //font-family: 'Inter', sans-serif;
         font-family: 'Onest', sans-serif;
         letter-spacing: 0.25px;
-        font-size: 3rem;
+        font-size: 3.5rem;
         font-weight: 600;
         width: 80%;
         margin: 0 auto;
@@ -40,44 +40,45 @@
         flex-wrap: wrap;
         align-items: flex-start;
         gap: 1rem;
-        .project-wrapper {
-            width: calc(50% - 1.25rem);
-            &:nth-of-type(1) .project-card {
-                //background-color: #9300a7;
-                background: linear-gradient(0deg, rgb(15, 15, 15) 0%, #001a4d 100%);
+        .project-card {
+            width: calc(50% - 2rem);
+            &:nth-of-type(1) .image-wrapper {
+                background: linear-gradient(125deg, rgb(20, 20, 20) 0%, rgb(0, 0, 125) 100%);
             }
-            &:nth-of-type(2) .project-card {
-                //background-color: rgb(170, 255, 0);
-                background: linear-gradient(120deg, rgb(131, 10, 10) 0%, #ff61a6 60%, #fff700 100%);
+            &:nth-of-type(2) .image-wrapper {
+                background: linear-gradient(125deg, rgb(131, 10, 10) 0%, #ff61a6 60%, #fff700 100%);
             }
-            &:nth-of-type(3) .project-card {
-                background: linear-gradient(135deg, #FC466B, #3F5EFB);
+            &:nth-of-type(3) .image-wrapper {
+                //background: linear-gradient(135deg, #FC466B, #3F5EFB);
+                background: linear-gradient(125deg, #050032, #004d9a);
             }
-            &:nth-of-type(4) .project-card {
-                //background-color: #bd00ff;
-                //background: linear-gradient(135deg, rgb(170, 255, 0), rgb(0, 0, 255), rgb(128, 255, 0));
+            &:nth-of-type(4) .image-wrapper {
                 background: linear-gradient(135deg, rgb(170, 255, 0) 0%, #00eaff 100%);
+                background: linear-gradient(125deg, #003c00 0%, #90ee90 100%);
+                //background: linear-gradient(135deg, #90ee90 0%, #003c00 100%);
             }
-            .project-card {
+            .image-wrapper {
                 height: 27.5rem;
                 position: relative;
                 overflow: hidden;
                 border-radius: 34px;
                 cursor: pointer;
-                transition: transform 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
-                &:hover {
-                    transform: translateY(-5px);
-                    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 6px 6px;
-                }
+                transition: transform 0.325s ease, box-shadow 0.325s ease;
+                transition-delay: 0.075s;
                 img {
                     position: absolute;
                     top: 112.5%;
                     left: 57.5%;
+                    top: 65%;
                     transform: translate(-50%, -50%);
                     border-radius: 14px;
                     width: auto;
                     height: auto;
                     object-fit: contain;
+                }
+                &:hover {
+                    transform: translateY(-6px);
+                    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 6px 6px;
                 }
             }
             p {

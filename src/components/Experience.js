@@ -34,6 +34,11 @@ function Experience() {
             jobTitle: 'Web Dev Course',
             company: 'Kodilla',
         },
+        {
+            time: '2018 - 2020',
+            jobTitle: 'IT Studies',
+            company: 'WSB Wrocław',
+        },
     ];
 
     return (
@@ -86,13 +91,13 @@ function Experience() {
                                 x: 0,
                                 transition: {
                                     duration: 0.35,
-                                    delay: 0.3,
+                                    delay: 0.2,
                                     type: 'ease',
                                 },
                             }}
                             transition={{
-                                duration: 0.55,
-                                delay: index * 0.15,
+                                duration: 0.6,
+                                delay: index * 0.175,
                                 type: 'easeIn',
                             }}
                         >
