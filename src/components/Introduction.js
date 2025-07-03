@@ -22,8 +22,8 @@ function Introduction() {
                 <Image
                     className='avatar_image'
                     src={'/avatar.png'}
-                    height={275}
-                    width={275}
+                    height={250}
+                    width={250}
                     priority={true}
                     //loading='lazy'
                     quality={100}
@@ -36,7 +36,7 @@ function Introduction() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{
-                        delay: 0.6,
+                        delay: 2.6,
                         duration: 1.5,
                         type: 'spring',
 
@@ -50,10 +50,9 @@ function Introduction() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{
-                        delay: 0.65,
+                        delay: 2.725,
                         duration: 1.5,
                         type: 'spring',
-
                         stiffness: 35,
                     }}
                 >
@@ -74,7 +73,7 @@ function Introduction() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{
-                        delay: 0.7,
+                        delay: 2.85,
                         duration: 1.5,
                         type: 'spring',
                         stiffness: 35,
@@ -93,7 +92,7 @@ function Introduction() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{
-                        delay: 0.9,
+                        delay: 3.05,
                         duration: 0.8,
                         type: 'easeIn',
                     }}

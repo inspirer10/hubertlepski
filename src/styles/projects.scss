@@ -252,3 +252,68 @@
         }
     }
 }
+
+//? BREAKPOINT - 1536 x 864
+@media screen and (max-width: 1600px) {
+    .projects_section {
+        h5,
+        .subHeading {
+            width: 85%;
+        }
+        .projects-spotlight-container {
+            width: 87.5%;
+            .project-card {
+                width: calc(50% - 1rem);
+                .image-wrapper {
+                    height: 25rem;
+                    img {
+                        left: 55%;
+                    }
+                }
+            }
+        }
+        .projects-gallery {
+            .projects-gallery-container {
+                width: 85%;
+            }
+            .project {
+                padding: 2.25rem 3rem;
+            }
+        }
+    }
+}
+
+//? BREAKPOINT - 1440 x 900
+@media screen and (max-width: 1450px) {
+    .projects_section .projects-gallery {
+        padding-bottom: 15vh;
+        .project {
+            padding: 1.75rem 3rem;
+            padding-right: 3.25rem;
+            .name-wrapper h3 {
+                font-size: calc(2.5rem - 2px);
+            }
+        }
+    }
+}
+
+//? BREAKPOINT - 1366 x 768
+@media screen and (max-width: 1375px) {
+    .projects_section {
+        h5,
+        .subHeading {
+            width: 90%;
+        }
+        .projects-spotlight-container {
+            width: 90%;
+            .project-card .image-wrapper {
+                height: 22.5rem;
+                border-radius: 24px;
+                img {
+                    top: 75%;
+                    left: calc(55% + 0.5rem);
+                }
+            }
+        }
+    }
+}

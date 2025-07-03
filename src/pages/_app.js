@@ -38,13 +38,13 @@ export default function App({ Component, pageProps }) {
     return (
         <main
             className={`
-        ${geistSans.variable}
-        ${suse.variable}
-        ${inter.variable}
-        ${lexendDeca.variable}
-        ${plusJakartaSans.variable}
-        ${merienda.variable}
-      `}
+                ${geistSans.variable}
+                ${suse.variable}
+                ${inter.variable}
+                ${lexendDeca.variable}
+                ${plusJakartaSans.variable}
+                ${merienda.variable}
+            `}
         >
             <Component {...pageProps} />
         </main>

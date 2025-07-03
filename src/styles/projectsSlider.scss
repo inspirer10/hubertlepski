@@ -130,3 +130,41 @@
         transform: translateX(calc(-50% - 1.5rem));
     }
 }
+
+//? BREAKPOINT - 1536 x 864
+@media screen and (max-width: 1600px) {
+    .projects-slider-container::before,
+    .projects-slider-container::after {
+        width: 10%;
+    }
+    .projects-slider-container .projects-slider .project-card {
+        width: 45vw;
+        .image-wrapper {
+            height: 375px;
+        }
+        .text-wrapper {
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+        }
+    }
+}
+
+//? BREAKPOINT - 1440 x 900
+@media screen and (max-width: 1450px) {
+    .projects-slider-container .projects-slider .project-card {
+        width: 47.5vw;
+        .image-wrapper {
+            height: 385px;
+        }
+    }
+}
+
+//? BREAKPOINT - 1366 x 768
+@media screen and (max-width: 1375px) {
+    .projects-slider-container .projects-slider .project-card {
+        width: 50vw;
+        .image-wrapper {
+            height: 360px;
+        }
+    }
+}

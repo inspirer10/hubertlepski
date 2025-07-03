@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'motion/react';
-//import SplitedText from './SplitedText';
 import Character from './Character';
 
 function AboutMe() {
@@ -17,7 +16,7 @@ function AboutMe() {
         {
             name: 'Zustand',
             //backgroundColor: '#764ABE',
-            backgroundColor: 'rgb(175,75,0)',
+            backgroundColor: '#39250d',
             color: '#FFF',
         },
         { name: 'node', backgroundColor: '#8AC600', color: '#000' },
@@ -50,15 +49,6 @@ function AboutMe() {
                 >
                     About Me
                 </motion.h5>
-
-                {/* <div className='text-container'>
-                    <article className='description_text'>
-                        <SplitedText phrase={phrase1} />
-                        <SplitedText phrase={phrase2} />
-                        <SplitedText phrase={phrase3} />
-                        <SplitedText phrase={phrase4} />
-                    </article>
-                </div> */}
 
                 <div className='text-container'>
                     <article className='description_text'>

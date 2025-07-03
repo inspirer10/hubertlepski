@@ -24,9 +24,9 @@ header {
         gap: 2.25rem;
         .link {
             //font-family: 'Plus Jakarta Sans', sans-serif;
-            font-family: 'Onest', sans-serif;
             //color: #333;
             //color: #FFF;
+            font-family: 'Onest', sans-serif;
             color: rgb(200, 200, 200);
             font-size: 17px;
             font-weight: 500;
@@ -82,5 +82,16 @@ nav:has(.link:hover) {
         opacity: 0.5;
         filter: blur(1.75px);
         transition: all 0.3s ease;
+    }
+}
+
+//? BREAKPOINT - 1366 x 768
+@media screen and (max-width: 1375px) {
+    header {
+        padding: 7px 2rem;
+        padding-left: 1.5rem;
+        nav .link {
+            font-size: 16px;
+        }
     }
 }

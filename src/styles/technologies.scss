@@ -181,3 +181,29 @@
         transform: translateX(calc(-50% - 1.5rem));
     }
 }
+
+//? BREAKPOINT - 1536 x 864
+@media screen and (max-width: 1600px) {
+    .technologies_section {
+        width: 87.5%;
+        .technologies-wrapper {
+            gap: 18px;
+            .tech-card {
+                height: 9rem;
+            }
+        }
+    }
+}
+
+//? BREAKPOINT - 1366 x 768
+@media screen and (max-width: 1375px) {
+    .technologies_section {
+        width: 90%;
+        .technologies-wrapper {
+            gap: 16px;
+            .tech-card {
+                height: 9rem;
+            }
+        }
+    }
+}

@@ -28,8 +28,7 @@ function ProjectSlider() {
         },
         {
             title: 'English Tutor',
-            //! image: '/slider/english-tutor.jpg',
-            image: '/slider/musthave2.jpg',
+            image: '/slider/englishTutor2.png',
             link: '',
         },
         {

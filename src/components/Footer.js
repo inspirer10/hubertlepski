@@ -139,7 +139,7 @@ function Footer() {
                                     GitHub <Arrow className='arrow-icon' />
                                 </Link>
                                 <Link
-                                    href='https://www.behance.net/LINKEDIN'
+                                    href='https://www.linkedin.com/in/hubert%C5%82/'
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     className='footer-link'

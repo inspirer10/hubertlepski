@@ -90,7 +90,7 @@ function Technologies() {
                         className='tech-card'
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: '-125px' }}
                         transition={{
                             duration: 0.6,
                             delay: index * 0.0825,

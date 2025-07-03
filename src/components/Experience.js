@@ -57,12 +57,12 @@ function Experience() {
             </motion.h5>
             <motion.p
                 className='subHeading'
-                initial={{ opacity: 0, x: -55 }}
+                initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{
                     duration: 1.1,
-                    delay: 0.375,
+                    delay: 0.4,
                     type: 'ease',
                 }}
             >
@@ -83,7 +83,7 @@ function Experience() {
                                 x: 14,
                                 transition: {
                                     duration: 0.35,
-                                    delay: 0.075,
+                                    delay: 0.05,
                                     type: 'ease',
                                 },
                             }}
@@ -91,13 +91,13 @@ function Experience() {
                                 x: 0,
                                 transition: {
                                     duration: 0.35,
-                                    delay: 0.2,
+                                    delay: 0.175,
                                     type: 'ease',
                                 },
                             }}
                             transition={{
                                 duration: 0.6,
-                                delay: index * 0.175,
+                                delay: index * 0.2,
                                 type: 'easeIn',
                             }}
                         >

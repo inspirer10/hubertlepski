@@ -123,3 +123,30 @@
         }
     }
 }
+
+//? BREAKPOINT - 1536 x 864
+@media screen and (max-width: 1600px) {
+    .experience_section {
+        width: 85%;
+    }
+}
+
+//? BREAKPOINT - 1440 x 900
+@media screen and (max-width: 1450px) {
+    .experience_section .experience-container {
+        margin: 5rem 0;
+        .experience-item .time {
+            width: 22.5%;
+        }
+    }
+}
+
+//? BREAKPOINT - 1366 x 768
+@media screen and (max-width: 1375px) {
+    .experience_section {
+        width: 87.5%;
+        .experience-container .experience-item {
+            margin-bottom: 1.25rem;
+        }
+    }
+}
