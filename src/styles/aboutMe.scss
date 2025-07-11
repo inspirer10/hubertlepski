@@ -217,3 +217,10 @@
         }
     }
 }
+
+//? BREAKPOINT - 1280 x 720
+@media screen and (max-width: 1285px) {
+    .aboutMe_section .content-wrapper .text-container .description_text .paragraph {
+        width: 60%;
+    }
+}

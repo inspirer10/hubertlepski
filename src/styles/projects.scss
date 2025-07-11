@@ -66,6 +66,7 @@
                 transition: transform 0.325s ease, box-shadow 0.325s ease;
                 transition-delay: 0.075s;
                 img {
+                    outline: 8px solid rgba(255, 255, 255, 0.3);
                     position: absolute;
                     top: 112.5%;
                     left: 57.5%;
@@ -191,6 +192,7 @@
             //width: 400px;
             height: 35vh;
             width: 22.5vw;
+            border-radius: 8px;
             position: absolute;
             //background-color: white;
             overflow: hidden;
@@ -268,6 +270,7 @@
                     height: 25rem;
                     img {
                         left: 55%;
+                        top: 70%;
                     }
                 }
             }
@@ -279,19 +282,30 @@
             .project {
                 padding: 2.25rem 3rem;
             }
+            .modalContainer {
+                width: 27.5vw
+            }
         }
     }
 }
 
 //? BREAKPOINT - 1440 x 900
 @media screen and (max-width: 1450px) {
-    .projects_section .projects-gallery {
-        padding-bottom: 15vh;
-        .project {
-            padding: 1.75rem 3rem;
-            padding-right: 3.25rem;
-            .name-wrapper h3 {
-                font-size: calc(2.5rem - 2px);
+    .projects_section {
+        .projects-spotlight-container .project-card .image-wrapper img {
+            left: 57.5%;
+        }
+        .projects-gallery {
+            padding-bottom: 15vh;
+            .project {
+                padding: 1.75rem 3rem;
+                padding-right: 3.25rem;
+                .name-wrapper h3 {
+                    font-size: calc(2.5rem - 2px);
+                }
+            }
+            .modalContainer {
+                height: 32.5vh;
             }
         }
     }
@@ -315,5 +329,37 @@
                 }
             }
         }
+        .projects-gallery {
+            .modalContainer {
+                height: 37.5vh;
+                width: 30vw;
+            }
+        }
+    }
+}
+
+//? BREAKPOINT - 1280 x 720
+@media screen and (max-width: 1285px) {
+    .projects_section {
+        .projects-gallery {
+            .project {
+                padding: 1.5rem 3rem;
+                .name-wrapper h3 {
+                    font-size: calc(2.25rem);
+                }
+            }
+            .modalContainer {
+                height: 40vh;
+                width: 32.5vw;
+            }
+            .projects-gallery-container {
+                width: 87.5%;
+            }
+        }
+    }
+    .projects_section .projects-spotlight-container .project-card .image-wrapper img {
+        //left: 60%;
+        top: calc(75% + 0.25rem);
+        left: 62.5%;
     }
 }

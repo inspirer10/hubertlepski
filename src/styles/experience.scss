@@ -145,8 +145,20 @@
 @media screen and (max-width: 1375px) {
     .experience_section {
         width: 87.5%;
+        .subHeading {
+            width: auto;
+        }
         .experience-container .experience-item {
             margin-bottom: 1.25rem;
+            .time {
+                width: 23.5%;
+            }
+            .job-title {
+                width: 19%;
+            }
+            .company-name {
+                padding: 8px 14px;
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ function RecentPhotos() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 1, type: 'ease' }}
             >
-                Some of my recent photography
+                Some of my recent photographs
             </motion.h2>
 
             {/*
@@ -69,7 +69,7 @@ function RecentPhotos() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.25, duration: 0.66 }}
                     >
-                        Grand Canyon - 08.2024
+                        Berlin - 05.2025
                     </motion.p>
                 </motion.div>
 
@@ -101,7 +101,7 @@ function RecentPhotos() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.25, duration: 0.66 }}
                     >
-                        London Big Ben - 11.2024
+                        Wrocław - 06.2025
                     </motion.p>
                 </motion.div>
             </main>

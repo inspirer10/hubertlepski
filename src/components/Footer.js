@@ -56,7 +56,7 @@ function Footer() {
                             fill='none'
                             xmlns='http://www.w3.org/2000/svg'
                         >
-                            <rect width='671' height='417' fill='#1e1e1e' />
+                            <rect width='671' height='417' fill='#FFFAFA' />
                             <rect width='671' height='417' fill='#FFFAFA' />
 
                             <path

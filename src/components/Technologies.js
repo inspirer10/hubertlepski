@@ -25,6 +25,7 @@ function Technologies() {
         { src: '/uxui.png', alt: 'UX/UI' },
         { src: '/copilot.png', alt: 'Copilot' },
         //* fourth row
+        { src: '/storybook.svg', alt: 'Storybook' },
         { src: '/tailwind.png', alt: 'Tailwind' },
         { src: '/bootstrap.png', alt: 'Bootstrap' },
         { src: '/router.png', alt: 'React Router' },

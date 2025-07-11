@@ -127,6 +127,7 @@
     }
 }
 
+//? BREAKPOINT - 1280 x 720
 @media screen and (max-width: 1285px) {
     .recent-photos_section {
         h2 {
@@ -137,6 +138,7 @@
         }
         main .photo-container {
             width: 24%;
+            aspect-ratio: 1 / 1.325;
         }
     }
 }

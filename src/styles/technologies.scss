@@ -207,3 +207,10 @@
         }
     }
 }
+
+//? BREAKPOINT - 1280 x 720
+@media screen and (max-width: 1285px) {
+    .technologies_section .technologies-wrapper .tech-card {
+        height: 8.5rem;
+    }
+}
