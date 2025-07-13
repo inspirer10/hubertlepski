@@ -13,9 +13,9 @@ function Projects() {
             icon: '👗',
             color: 'linear-gradient(#000, #000)',
             src: 'webstoreScroll.jpg',
-            srcX: 'webstoreScroll.jpg',
+            //srcX: 'webstoreScroll.jpg',
             url: 'https://musthave.vercel.app/',
-            id: 1,
+            id: 1337,
         },
 
         {
@@ -34,6 +34,15 @@ function Projects() {
             src: 'foodMaster.png',
             url: 'https://food-master-hl.vercel.app/',
             id: 44,
+        },
+
+        {
+            name: 'SaaS Company',
+            icon: '☁️',
+            color: 'linear-gradient(215deg, #6356ed, #00042f)',
+            src: 'saas-companyScroll.png',
+            url: 'https://saas-company.vercel.app/',
+            id: 1,
         },
 
         {
@@ -278,7 +287,6 @@ function Projects() {
                 <div className='project-card'>
                     <div className='image-wrapper'>
                         <Image
-                            srcX={'/mona.jpg'}
                             src={
                                 '/projects/thumbnails/englishTutor-thumbnail.png'
                             }

@@ -27,22 +27,6 @@ function RecentPhotos() {
                 Some of my recent photographs
             </motion.h2>
 
-            {/*
-            <motion.p
-                className='subHeading'
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                    delay: 0.25,
-                    duration: 1,
-                    type: 'easeIn',
-                }}
-            >
-                from trips to English speaking countries
-            </motion.p>
-            */}
-
             <main>
                 <motion.div
                     className='photo-container'
@@ -57,11 +41,12 @@ function RecentPhotos() {
                 >
                     <div className='image-wrapper'>
                         <Image
-                            src={'/pizza.jpg'}
-                            height={900}
-                            width={900}
+                            src={'/obraz1.jpg'}
+                            height={600}
+                            width={600}
+                            quality={100}
                             alt='Recent Photography'
-                            className='rotated'
+                            //className='rotated'
                         />
                     </div>
                     <motion.p
@@ -90,9 +75,10 @@ function RecentPhotos() {
                 >
                     <div className='image-wrapper'>
                         <Image
-                            src={'/mona.jpg'}
-                            height={900}
-                            width={900}
+                            src={'/obraz2.jpg'}
+                            height={600}
+                            width={600}
+                            quality={100}
                             alt='Recent Photography'
                         />
                     </div>

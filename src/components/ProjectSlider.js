@@ -28,7 +28,7 @@ function ProjectSlider() {
         },
         {
             title: 'English Tutor',
-            image: '/slider/englishTutor2.png',
+            image: '/slider/englishTutor.png',
             link: '',
         },
         {

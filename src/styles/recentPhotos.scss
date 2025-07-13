@@ -81,9 +81,6 @@
                     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
                     object-fit: cover;
                     object-position: bottom;
-                    &.rotated {
-                        transform: scaleX(-1);
-                    }
                 }
             }
             p {

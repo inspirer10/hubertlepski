@@ -3,6 +3,7 @@ import React, { useCallback, useState } from 'react';
 import { motion, useAnimation } from 'motion/react';
 import { DownloadIcon } from './animatedIcons/DownloadIcon';
 import { BsMouse3 } from 'react-icons/bs';
+import Link from 'next/link';
 
 function Introduction() {
     const [isHovered, setIsHovered] = useState(false);
@@ -119,30 +120,36 @@ function Introduction() {
                             type: 'easeIn',
                         }}
                     >
-                        <motion.button
-                            className='download_button'
-                            onMouseEnter={() => {
-                                setIsHovered(true);
-                                controls.start('animate'); // Start animation
-                            }}
-                            onMouseLeave={() => {
-                                setIsHovered(false);
-                                controls.start('normal'); // Reset animation
-                            }}
+                        <Link
+                            href='/CV/CV.pdf'
+                            download='Hubert Łepski CV.pdf'
+                            target='_blank'
+                            rel='noopener noreferrer'
                         >
-                            Download CV
-                            <DownloadIcon
-                                stroke={isHovered ? '#fff' : '#000'}
-                                controls={controls}
-                            />
-                        </motion.button>
-
-                        <motion.button
+                            <button
+                                className='download_button'
+                                onMouseEnter={() => {
+                                    setIsHovered(true);
+                                    controls.start('animate'); // Start animation
+                                }}
+                                onMouseLeave={() => {
+                                    setIsHovered(false);
+                                    controls.start('normal'); // Reset animation
+                                }}
+                            >
+                                Download CV
+                                <DownloadIcon
+                                    stroke={isHovered ? '#fff' : '#000'}
+                                    controls={controls}
+                                />
+                            </button>
+                        </Link>
+                        <button
                             className='projects'
                             onClick={(e) => handleContactClick(e, 'Contact')}
                         >
                             Available for new projects
-                        </motion.button>
+                        </button>
                     </motion.div>
                 </article>
 
