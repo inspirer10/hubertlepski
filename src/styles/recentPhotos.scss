@@ -161,7 +161,7 @@
                     font-size: 18px;
                 }
                 &:nth-of-type(2) {
-                    rotate: 6deg;
+                    rotate: 6deg !important;
                     transform: translate(0%, 10%);
                 }
             }

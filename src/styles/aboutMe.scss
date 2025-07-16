@@ -224,3 +224,25 @@
         width: 60%;
     }
 }
+
+//? mobile BREAKPOINT - below 550px
+@media screen and (max-width: 550px) {
+    .aboutMe_section .content-wrapper {
+        width: 95%;
+        h5 {
+            text-align: center;
+        }
+    }
+    .aboutMe_section .content-wrapper .text-container .description_text .paragraph {
+        width: 100%;
+        font-size: 20px;
+        margin-top: 22.5vh;
+        .word {
+            margin-right: 7px;
+            margin-top: 2px;
+        }
+    }
+    .aboutMe_section .content-wrapper .skills-showcase-wrapper {
+        display: none;
+    }
+}

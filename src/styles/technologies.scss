@@ -214,3 +214,25 @@
         height: 8.5rem;
     }
 }
+
+//? mobile BREAKPOINT - below 550px
+@media screen and (max-width: 550px) {
+    .technologies_section {
+        width: 95%;
+        padding-bottom: 10vh;
+        h5 {
+            font-size: 3.25rem;
+            text-align: center;
+        }
+        .subHeading {
+            width: 100%;
+            text-align: center;
+        }
+        .technologies-wrapper {
+            gap: 12px;
+            .tech-card {
+                height: 7.5rem;
+            }
+        }
+    }
+}

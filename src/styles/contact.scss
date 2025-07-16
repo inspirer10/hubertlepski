@@ -201,7 +201,7 @@
             }
         }
         .links-wrapper {
-            width: 97.5%;
+            width: 99%;
             flex-direction: column;
             button {
                 margin: 5rem auto;
@@ -209,12 +209,13 @@
             .link {
                 width: 100%;
                 font-size: 2.25rem;
+                padding: 0.75rem 0.25rem;
                 .background-icon {
                     font-size: 14rem;
                 }
                 p {
                     margin-top: 2px;
-                    font-size: 34px;
+                    font-size: 32px;
                 }
             }
         }
@@ -235,20 +236,20 @@
             }
         }
         .links-wrapper {
-            width: 97.5%;
+            width: 99%;
             flex-direction: column;
             button {
                 margin: 5rem auto;
             }
             .link {
                 width: 100%;
-                font-size: 1.85rem;
+                font-size: 1.75rem;
                 .background-icon {
                     font-size: 14rem;
                 }
                 p {
                     margin-top: 2px;
-                    font-size: 31px;
+                    font-size: 30px;
                 }
             }
         }

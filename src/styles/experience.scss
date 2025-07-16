@@ -162,3 +162,44 @@
         }
     }
 }
+
+//? mobile BREAKPOINT - below 550px
+@media screen and (max-width: 550px) {
+    .experience_section {
+        width: 95%;
+        h5 {
+            font-size: 3.25rem;
+            text-align: center;
+        }
+        .subHeading {
+            width: 100%;
+            text-align: center;
+            font-size: 19px;
+        }
+        .experience-container .experience-item {
+            flex-direction: column-reverse;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            .time {
+                width: 100%;
+                text-align: center;
+                letter-spacing: 0.25px;
+            }
+            .job-title {
+                width: 100%;
+                text-align: center;
+                margin-right: 0;
+                margin: 0.25rem 0;
+                letter-spacing: 0.5px;
+            }
+            .company-name {
+                font-size: 22px;
+                letter-spacing: -0.25px;
+                width: 97.5%;
+                text-align: center;
+                padding: 0.75rem 0;
+                text-wrap: nowrap;
+            }
+        }
+    }
+}

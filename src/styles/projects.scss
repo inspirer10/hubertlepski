@@ -363,3 +363,56 @@
         left: 62.5%;
     }
 }
+
+//? mobile BREAKPOINT - below 550px
+@media screen and (max-width: 550px) {
+    .projects_section {
+        width: 95%;
+        h5,
+        .subHeading {
+            width: 100%;
+            text-align: center;
+        }
+        .projects-spotlight-container {
+            width: 100%;
+            .project-card {
+                width: 100%;
+                .image-wrapper {
+                    height: 17.5rem;
+                    img {
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-27%, -25%);
+                    }
+                }
+            }
+        }
+        .projects-gallery {
+            padding: 10vh 0 15vh;
+            .projects-gallery-container {
+                width: 100%;
+            }
+            .project {
+                padding: 1.75rem 0.5rem;
+                .name-wrapper {
+                    width: 100%;
+                    text-align: center;
+                    h3 {
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                    }
+                    span {
+                        display: none;
+                    }
+                }
+                p {
+                    display: none;
+                }
+            }
+            .modalContainer {
+                height: 32.5vh;
+                width: 90%;
+            }
+        }
+    }
+}

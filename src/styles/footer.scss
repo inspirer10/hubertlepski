@@ -280,6 +280,9 @@ footer {
                     flex-direction: column-reverse;
                     div {
                         margin-top: 5vh;
+                        span {
+                            font-weight: 300;
+                        }
                         .heading {
                             font-size: 2rem;
                             span {
@@ -303,9 +306,11 @@ footer {
                     width: 97.5%;
                     .footer-links {
                         justify-content: space-between;
+                        gap: 0.5rem;
                         .links-wrapper {
                             width: 50%;
                             justify-content: space-around;
+                            gap: 0.5rem;
                             .footer-link {
                                 font-size: 16px;
                                 margin-left: 0rem;
@@ -317,14 +322,15 @@ footer {
                         width: 97.5%;
                         margin: 0 auto 0.75rem;
                         .info {
-                            font-size: 12.5px;
+                            font-size: 14px;
+                            letter-spacing: -0.5px;
                             .colon {
-                                font-size: 12px;
+                                font-size: 14px;
                             }
                         }
                         .footer-email-link {
                             font-size: 15px;
-                            letter-spacing: 0.5px;
+                            letter-spacing: 0px;
                         }
                     }
                 }

@@ -168,3 +168,29 @@
         }
     }
 }
+
+//? mobile BREAKPOINT - below 550px
+@media screen and (max-width: 550px) {
+    .projects-slider-container {
+        .projects-slider {
+            padding-top: 8.25rem;
+            animation: marquee-animation 15s linear infinite forwards;
+            .project-card {
+                width: 125vw;
+                .image-wrapper {
+                    height: 270px;
+                }
+                .text-wrapper {
+                    padding: 0.75rem 0.75rem 0.25rem;
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    .projects-slider-container::before,
+    .projects-slider-container::after {
+        width: 0;
+    }
+}
