@@ -91,7 +91,7 @@ function Projects() {
         },
 
         {
-            name: 'Sushi Page',
+            name: 'Sushi Restaurant',
             icon: '🍣',
             color: 'linear-gradient(to right top, #ca3f46, #FFF0DE)',
             src: 'sushiScroll.jpg',
