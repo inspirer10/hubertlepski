@@ -22,7 +22,8 @@ function Introduction() {
         { src: '/css.png', alt: 'CSS' },
         { src: '/sass.png', alt: 'Sass' },
         //*2nd row
-        { src: '/git.png', alt: 'Git' },
+        { src: '/tailwind.png', alt: 'Tailwind' },
+
         { src: '/js.png', alt: 'JavaScript' },
         { src: '/react.png', alt: 'React' },
         //*3rd row
@@ -30,13 +31,14 @@ function Introduction() {
         { src: '/redux.png', alt: 'Redux' },
         { src: '/next.png', alt: 'Next.js' },
         //*4th row
+        { src: '/git.png', alt: 'Git' },
         { src: '/mui.png', alt: 'MUI' },
         { src: '/ts.png', alt: 'TypeScript' },
-        { src: '/node.png', alt: 'Node.js' },
+
         //*5th row
+        { src: '/node.png', alt: 'Node.js' },
         { src: '/storybook.svg', alt: 'Storybook' },
         { src: '/mongoDB.png', alt: 'MongoDB' },
-        { src: '/tailwind.png', alt: 'Tailwind' },
     ];
 
     return (
@@ -51,8 +53,6 @@ function Introduction() {
                         priority={true}
                         //loading='lazy'
                         quality={100}
-                        placeholder='blur'
-                        blurDataURL='/avatar.png'
                         alt='person avatar'
                     />
                     <motion.h2

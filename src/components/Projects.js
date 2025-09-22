@@ -19,6 +19,15 @@ function Projects() {
         },
 
         {
+            name: 'SEO SaaS Company',
+            icon: '👩🏽‍🏫',
+            color: 'linear-gradient(to right bottom, #ff6200, #311300)',
+            src: 'seo-saas.png',
+            url: 'https://seo-saas-company.vercel.app/',
+            id: 23425,
+        },
+
+        {
             name: 'English Tutor',
             icon: '👩🏽‍🏫',
             color: 'linear-gradient(to right top, #990087, #CE2B37)',
@@ -274,7 +283,7 @@ function Projects() {
                     <div className='image-wrapper'>
                         <Image
                             //src={'/slider/musthave2.jpg'}
-                            src={'/projects/thumbnails/musthave-thumbnail.png'}
+                            src={'/projects/thumbnails/musthave2-thumbnail.png'}
                             height={600}
                             width={600}
                             quality={100}
@@ -302,16 +311,14 @@ function Projects() {
                 <div className='project-card'>
                     <div className='image-wrapper'>
                         <Image
-                            src={
-                                '/projects/thumbnails/rent-manager-thumbnail.png'
-                            }
+                            src={'/projects/thumbnails/seo-saas-thumbnail.png'}
                             height={600}
                             width={600}
                             quality={100}
                             alt='project spotlight thumbnail'
                         />
                     </div>
-                    <p>Food Expiration Reminder</p>
+                    <p>SEO SaaS Company</p>
                 </div>
 
                 <div className='project-card'>
@@ -332,19 +339,19 @@ function Projects() {
 
             <article className='projects-gallery'>
                 <div className='projects-gallery-container'>
-                    {projectsData.map((project, i) => (
+                    {projectsData.map((project, index) => (
                         <Link
                             href={project.url}
                             target='_blank'
                             rel='noopener noreferrer'
                             className='project-link'
-                            key={i}
+                            key={index}
                         >
                             <SingleProject
                                 setModal={setModal}
-                                index={i}
+                                index={index}
                                 project={project}
-                                key={i}
+                                key={index}
                             />
                         </Link>
                     ))}
