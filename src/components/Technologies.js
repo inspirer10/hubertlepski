@@ -123,8 +123,6 @@ function Technologies() {
                             height={150}
                             alt={alt}
                             loading='lazy'
-                            placeholder='blur'
-                            blurDataURL={`/technologies${src}`}
                         />
                     </motion.div>
                 ))}

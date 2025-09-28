@@ -30,6 +30,7 @@ function SectionsObserver({ children }) {
             Experience: scrollDirection === 'down' ? 0.66 : 0.2,
             Contact: scrollDirection === 'down' ? 0.66 : 0.3,
         };
+
         return thresholds[sectionName];
     };
 

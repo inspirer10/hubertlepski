@@ -12,11 +12,11 @@ import InitialLoading from '@/components/InitialLoading';
 import ProjectSlider from '@/components/ProjectSlider';
 import SectionsObserver from '@/components/SectionObserver';
 import Experience from '@/components/Experience';
+import Footer from '@/components/Footer';
 
 //* LENIS
 import Lenis from 'lenis';
-import Footer from '@/components/Footer';
-import TestComponent from '@/components/TestComponent';
+
 /*
 const geistSans = Geist({
     variable: '--font-geist-sans',
