@@ -42,11 +42,17 @@
             width: 100%;
             &:nth-of-type(2) {
                 .company-name {
+                    color: rgb(102, 0, 156);
+                    background-color: rgb(198, 160, 255);
+                }
+            }
+            &:nth-of-type(3) {
+                .company-name {
                     color: rgb(160, 85, 0);
                     background-color: rgb(255, 225, 186);
                 }
             }
-            &:nth-of-type(3) {
+            &:nth-of-type(4) {
                 .company-name {
                     // background-color: rgb(169, 208, 152);
                     //color: rgb(15, 70, 15);
@@ -58,14 +64,14 @@
                     color: rgb(160, 44, 35);
                 }
             }
-            &:nth-of-type(4) {
+            &:nth-of-type(5) {
                 .company-name {
                     background-color: rgb(35, 35, 35);
                     color: rgb(225, 225, 225);
                     border-color: rgb(70, 70, 70);
                 }
             }
-            &:nth-of-type(5) {
+            &:nth-of-type(6) {
                 .company-name {
                     background-color: rgb(201, 255, 201);
                     color: rgb(0, 65, 0);

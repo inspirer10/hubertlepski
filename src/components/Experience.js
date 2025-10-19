@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion, useAnimation } from 'motion/react';
-
 import { DownloadIcon } from './animatedIcons/DownloadIcon';
 
 function Experience() {
@@ -14,10 +13,20 @@ function Experience() {
             company: 'Fundacja Kompetencji Cyfrowych',
         },
         {
+            time: '10.2025',
+            jobTitle: 'AI Course',
+            company: 'Umiejętnosci Jutra AI',
+            certificate: true,
+            href: '/CV/umiejetnosciJutraCertificate.pdf',
+            fileName: 'Hubert Łepski Umiejętności JutraAI.pdf',
+        },
+        {
             time: '05.2025',
             jobTitle: 'AI Course',
             company: 'AIDEAS',
             certificate: true,
+            href: '/CV/aideasCertificate.pdf',
+            fileName: 'Hubert Łepski AiDEAS.pdf',
         },
         {
             time: '12.2024 - 03.2025',
@@ -72,7 +81,17 @@ function Experience() {
 
             <div className='experience-container'>
                 {experienceData.map(
-                    ({ time, jobTitle, company, certificate }, index) => (
+                    (
+                        {
+                            time,
+                            jobTitle,
+                            company,
+                            certificate,
+                            href,
+                            fileName,
+                        },
+                        index
+                    ) => (
                         <motion.div
                             key={index}
                             className='experience-item'
@@ -82,16 +101,16 @@ function Experience() {
                             whileHover={{
                                 x: 14,
                                 transition: {
-                                    duration: 0.35,
-                                    delay: 0.05,
+                                    duration: 0.325,
+                                    delay: 0.025,
                                     type: 'ease',
                                 },
                             }}
                             animate={{
                                 x: 0,
                                 transition: {
-                                    duration: 0.35,
-                                    delay: 0.175,
+                                    duration: 0.325,
+                                    delay: 0.15,
                                     type: 'ease',
                                 },
                             }}
@@ -107,8 +126,8 @@ function Experience() {
                             {certificate && (
                                 <a
                                     className='download_button'
-                                    href='/CV/aideasCertificate.pdf'
-                                    download='Hubert Łepski AiDEAS.pdf'
+                                    href={href}
+                                    download={fileName}
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     onMouseEnter={() =>

@@ -19,6 +19,15 @@ function Projects() {
         },
 
         {
+            name: 'SIEMANKO Foundation',
+            icon: '👋',
+            color: 'linear-gradient(to left bottom, #3C7748 45%, #E94816)',
+            src: 'siemanko.png',
+            url: 'https://siemanko-six.vercel.app/',
+            id: 5000,
+        },
+
+        {
             name: 'SEO SaaS Company',
             icon: '👩🏽‍🏫',
             color: 'linear-gradient(to right bottom, #ff6200, #311300)',
