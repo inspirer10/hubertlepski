@@ -10,6 +10,7 @@ import '@/styles/experience.scss';
 import '@/styles/projects.scss';
 import '@/styles/contact.scss';
 import '@/styles/footer.scss';
+import '@/styles/microinteractions.scss';
 
 // Import fontów
 import {
