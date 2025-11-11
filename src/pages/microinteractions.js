@@ -1,6 +1,12 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import React, { useRef, useState } from 'react';
+import Link from 'next/link';
+import React, { useEffect, useRef, useState } from 'react';
+import { useScrolled } from '@/components/hooks/useScrolled';
+//* LENIS
+import Lenis from 'lenis';
+import { LuMousePointerClick } from 'react-icons/lu';
+import { SiRedux } from 'react-icons/si';
 import { TbBrandTinder, TbSchema } from 'react-icons/tb';
 import {
     FaArrowTrendUp,
@@ -10,17 +16,28 @@ import {
     FaQuestion,
     FaRegEye,
 } from 'react-icons/fa6';
-import { LuMousePointerClick } from 'react-icons/lu';
-import { SiRedux } from 'react-icons/si';
-import Link from 'next/link';
-import { useScrolled } from '@/components/hooks/useScrolled';
 
 function Microinteractions() {
     const trigger = useRef(null);
     const triggerBlockRef = useRef(null);
     const [isTriggerHovered, setIsTriggerHovered] = useState(false);
 
-    const isScrolled = useScrolled(75);
+    const isScrolled = useScrolled(85);
+
+    //HANDLE LENIS SCROLL
+    useEffect(() => {
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        return () => {
+            lenis.destroy();
+        };
+    }, []);
+
     return (
         <>
             <Head>
@@ -33,28 +50,28 @@ function Microinteractions() {
 
             <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
                 <ul>
-                    <Link className='link' href='/microinteractions/whatAre'>
+                    <Link className='link' href='#whatAre'>
                         Czym są
                     </Link>
-                    <Link className='link' href='/microinteractions/why'>
+                    <Link className='link' href='#meaning'>
                         Znaczenie
                     </Link>
-                    <Link className='link' href='/microinteractions/scheme'>
+                    <Link className='link' href='#scheme'>
                         Schemat
                     </Link>
-                    <Link className='link' href='/microinteractions/scheme'>
+                    <Link className='link' href='#types'>
                         Rodzaje
                     </Link>
-                    <Link className='link' href='/microinteractions/scheme'>
+                    <Link className='link' href='#implementation'>
                         Implementacja
                     </Link>
-                    <Link className='link' href='/microinteractions/scheme'>
+                    <Link className='link' href='#accessibility'>
                         Dostępność
                     </Link>
-                    <Link className='link' href='/microinteractions/scheme'>
+                    <Link className='link' href='#examples'>
                         Przykłady
                     </Link>
-                    <Link className='link' href='/microinteractions/scheme'>
+                    <Link className='link' href='#practices'>
                         Praktyki
                     </Link>
                 </ul>
@@ -98,40 +115,30 @@ function Microinteractions() {
                             <h3>Czym właściwie są mikrointerakcje</h3>
                         </div>
 
-                        <p style={{ color: 'rgb(255, 50, 50)', opacity: 0.35 }}>
-                            Mikrointerakcje to niewielkie, celowe momenty
-                            interakcji między użytkownikiem a interfejsem, które
-                            skupiają się na pojedynczym zadaniu lub przypadku
-                            użycia. Jeśli kiedykolwiek obserwowałeś, jak
-                            przycisk {"'Like'"} zmienia kolor po kliknięciu, jak
-                            formularz logowania delikatnie {"'trzęsie się'"} po
-                            wpisaniu błędnego hasła, lub jak pasek postępu
-                            pokazuje, że Twoja akcja jest przetwarzana –
-                            doświadczyłeś mikrointerakcji.
-                        </p>
                         <p>
-                            Mikrointerakcje to krótkie, skupione na jednym
-                            zadaniu interakcje lub animacje na stronie
-                            internetowej albo w aplikacji. Dzieją się „w tle” –
-                            reagują na akcję użytkownika, systemu lub zmianę
-                            stanu. Mogą to być zmiany koloru przycisku po
-                            najechaniu kursorem, animacja ładowania, delikatny
-                            shake w polu z błędem, powiadomienia, reakcje na
-                            kliknięcia czy mikro-animowane zmiany w menu. Z ich
-                            pomocą interfejs staje się bardziej przystępny,
-                            praktyczny i przyjazny.
+                            Mikrointerakcje to krótkie, celowe momenty
+                            interakcji między użytkownikiem a interfejsem.
+                            Reagują na akcję użytkownika, systemu lub zmianę
+                            stanu. Przykłady: zmiana koloru przycisku przy
+                            najechaniu kursorem, animacje ładowania, delikatne
+                            potrząśnięcie formularza logowania po wpisaniu
+                            błędnego hasła, powiadomienia, reakcje na kliknięcia
+                            oraz drobne animacje w menu. Dzięki nim interfejs
+                            staje się czytelniejszy, bardziej praktyczny i
+                            przyjazny.
                         </p>
+
                         <p>
                             Mikrointerakcje, choć pozornie drobne, mają ogromny
                             wpływ na UX – doświadczenie użytkownika, a co za tym
                             idzie na zaangażowanie, retencję i konwersje.
                             Użytkownik, który dostaje natychmiastową informację
                             zwrotną, czuje się pewniej i chętniej korzysta z
-                            funkcji – a przez to wraca na stronę częściej
+                            funkcji – a przez to wraca na stronę częściej.
                         </p>
                     </div>
 
-                    <div className='block' id='why'>
+                    <div className='block' id='meaning'>
                         <div className='heading'>
                             <FaQuestion className='icon' />
                             <h3>Dlaczego mikrointerakcje mają znaczenie</h3>
@@ -332,7 +339,7 @@ function Microinteractions() {
                         </div>
                     </div>
 
-                    <div className='block'>
+                    <div className='block' id='accessibility'>
                         <div className='heading'>
                             <FaMagnifyingGlass className='icon' />
                             <h3>Dostępność i mikrointerakcje</h3>
@@ -366,7 +373,7 @@ function Microinteractions() {
                         </div>
                     </div>
 
-                    <div className='block'>
+                    <div className='block' id='examples'>
                         <div className='heading'>
                             <TbBrandTinder className='icon' />
                             <h3>Przykłady z realnych produktów</h3>
@@ -398,7 +405,7 @@ function Microinteractions() {
                         </div>
                     </div>
 
-                    <div className='block'>
+                    <div className='block' id='practices'>
                         <div className='heading'>
                             <FaBorderTopLeft className='icon' />
                             <h3>Najlepsze praktyki</h3>
@@ -439,7 +446,7 @@ function Microinteractions() {
                         </div>
                     </div>
 
-                    <div className='block'>
+                    <div className='block' id='trends'>
                         <div className='heading'>
                             <FaArrowTrendUp className='icon' />
                             <h3>Trendy na 2025</h3>
@@ -471,7 +478,7 @@ function Microinteractions() {
                         </div>
                     </div>
 
-                    <div className='block'>
+                    <div className='block' id='summary'>
                         <div className='heading'>
                             <FaRegEye className='icon' />
                             <h3>Podsumowanie</h3>

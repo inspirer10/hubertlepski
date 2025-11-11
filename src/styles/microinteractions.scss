@@ -1,32 +1,27 @@
 .navbar {
     position: fixed;
     z-index: 10000;
-    top: 2.25rem;
+    top: 2rem;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 0.75rem 0rem;
-    border: 1px solid rgba(200, 200, 200, 0.35);
+    padding: 10px 0rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50px;
     width: 90%;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.9);
+    background-color: transparent;
     transition: 0.35s ease;
     &.scrolled {
         border-radius: 10px;
         width: 52.5%;
         background-color: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(200, 200, 200, 0.35);
         backdrop-filter: blur(5px);
         ul {
             gap: 2.25rem;
-            .link {
-                color: rgb(215, 215, 215);
-                &:hover {
-                    color: #FFF;
-                }
-            }
         }
     }
     ul {
@@ -39,7 +34,6 @@
         will-change: gap;
         transition: 0.3s ease;
         .link {
-            color: #000;
             font-size: 18px;
             font-weight: 600;
             letter-spacing: -0.25px;
@@ -75,8 +69,7 @@
             }
             &:hover {
                 border: none;
-                color: #000;
-                color: rgb(8, 31, 202);
+                color: #FFF;
                 transform: translateY(-2px);
                 &::after {
                     transform: translate(-50%, -50%) scale(1);
@@ -148,9 +141,10 @@
         margin-top: 5rem;
         display: flex;
         flex-direction: column;
-        gap: 3.75rem;
         max-width: 1200px;
+        gap: 4.5rem;
         .block {
+            scroll-margin-top: 4.5rem;
             display: flex;
             flex-direction: column;
             gap: 1.25rem;
@@ -237,6 +231,7 @@
                     transition: 0.275s ease;
                     span {
                         color: rgb(50, 50, 75);
+                        font-style: italic;
                     }
                 }
                 p {

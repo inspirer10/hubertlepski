@@ -11,7 +11,7 @@ function Projects() {
         {
             name: 'MUSTHAVE Webstore',
             icon: '👗',
-            color: 'linear-gradient(#000, #000)',
+            color: 'linear-gradient(to right,rgb(15, 15, 15), rgb(15, 15, 100))',
             src: 'webstoreScroll.jpg',
             //srcX: 'webstoreScroll.jpg',
             url: 'https://musthave.vercel.app/',
@@ -29,11 +29,20 @@ function Projects() {
 
         {
             name: 'SEO SaaS Company',
-            icon: '👩🏽‍🏫',
+            icon: '🌐',
             color: 'linear-gradient(to right bottom, #ff6200, #311300)',
             src: 'seo-saas.png',
             url: 'https://seo-saas-company.vercel.app/',
             id: 23425,
+        },
+
+        {
+            name: 'Xyntium Finances',
+            icon: '💳',
+            color: 'linear-gradient(to right bottom, rgb(96, 229, 80), rgb(11, 11, 11))',
+            src: 'xyntiumSCroll.png',
+            url: 'https://xyntium-finances.vercel.app/',
+            id: 213713370123,
         },
 
         {
