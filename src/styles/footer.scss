@@ -2,6 +2,7 @@
 footer {
     background-color: #FFFAFA;
     color: #000;
+    font-family: var(--font-onest), sans-serif;
     height: 67.5vh;
     position: relative;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
@@ -36,6 +37,7 @@ footer {
                     flex-direction: column;
                     align-items: center;
                     .heading {
+                        font-family: var(--font-onest), sans-serif;
                         font-size: 3rem;
                         font-weight: 400;
                         letter-spacing: -0.5px;
@@ -48,6 +50,7 @@ footer {
                         }
                     }
                     .subHeading {
+                        font-family: var(--font-onest), sans-serif;
                         font-size: 3rem;
                         font-weight: 400;
                         letter-spacing: -0.5px;
@@ -61,6 +64,7 @@ footer {
                         }
                     }
                     span {
+                        font-family: var(--font-onest), sans-serif;
                         font-size: 2.75rem;
                         font-weight: 400;
                         margin: 0.25rem 0;
@@ -126,7 +130,7 @@ footer {
                     }
                 }
                 //! Bottom
-                summary {
+                .summary {
                     border-top: 1px solid rgb(115, 115, 115);
                     padding-top: 0.4rem;
                     display: flex;
@@ -235,7 +239,7 @@ footer {
     }
 }
 
-//?  S - laptops
+//? S - laptops
 @media screen and (max-width: 1285px) {
     footer {
         .footer_content-container {
@@ -317,7 +321,7 @@ footer {
                             }
                         }
                     }
-                    summary {
+                    .summary {
                         margin-bottom: 0.75rem;
                         width: 97.5%;
                         margin: 0 auto 0.75rem;

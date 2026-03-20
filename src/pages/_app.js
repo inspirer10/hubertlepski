@@ -12,39 +12,44 @@ import '@/styles/contact.scss';
 import '@/styles/footer.scss';
 import '@/styles/microinteractions.scss';
 
-// Import fontów
-import {
-    Geist,
-    SUSE,
-    Inter,
-    Lexend_Deca,
-    Plus_Jakarta_Sans,
-    Merienda,
-} from 'next/font/google';
+import { Barlow, Inter, Merienda, Onest, SUSE } from 'next/font/google';
 
-const geistSans = Geist({ subsets: ['latin'], variable: '--font-geist-sans' });
-const suse = SUSE({ subsets: ['latin'], variable: '--font-suse' });
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const lexendDeca = Lexend_Deca({
+const suse = SUSE({
     subsets: ['latin'],
-    variable: '--font-lexend-deca',
+    variable: '--font-suse',
+    display: 'swap',
 });
-const plusJakartaSans = Plus_Jakarta_Sans({
+const inter = Inter({
     subsets: ['latin'],
-    variable: '--font-plus-jakarta-sans',
+    variable: '--font-inter',
+    display: 'swap',
 });
-const merienda = Merienda({ subsets: ['latin'], variable: '--font-merienda' });
+const merienda = Merienda({
+    subsets: ['latin'],
+    variable: '--font-merienda',
+    display: 'swap',
+});
+const onest = Onest({
+    subsets: ['latin', 'latin-ext'],
+    variable: '--font-onest',
+    display: 'swap',
+});
+const barlow = Barlow({
+    subsets: ['latin', 'latin-ext'],
+    variable: '--font-barlow',
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+    display: 'swap',
+});
 
 export default function App({ Component, pageProps }) {
     return (
         <main
             className={`
-                ${geistSans.variable}
                 ${suse.variable}
                 ${inter.variable}
-                ${lexendDeca.variable}
-                ${plusJakartaSans.variable}
                 ${merienda.variable}
+                ${onest.variable}
+                ${barlow.variable}
             `}
         >
             <Component {...pageProps} />

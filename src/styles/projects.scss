@@ -6,10 +6,7 @@
     // to remove
     // height: 100vh;
     h5 {
-        // font-family: 'Lexend Deca', sans-serif;
-        //font-family: 'Plus Jakarta Sans', sans-serif;
-        //font-family: 'Inter', sans-serif;
-        font-family: 'Onest', sans-serif;
+        font-family: var(--font-onest), sans-serif;
         letter-spacing: 0.25px;
         font-size: 3.5rem;
         font-weight: 600;
@@ -17,10 +14,7 @@
         margin: 0 auto;
     }
     .subHeading {
-        //font-family: 'Plus Jakarta Sans', sans-serif;
-        //font-family: 'Geist', sans-serif;
-        //font-family: 'Inter', sans-serif;
-        font-family: 'Barlow', sans-serif;
+        font-family: var(--font-barlow), sans-serif;
         letter-spacing: -0.25px;
         font-size: 20px;
         font-weight: 300;
@@ -83,7 +77,7 @@
                 }
             }
             p {
-                font-family: 'SUSE', sans-serif;
+                font-family: var(--font-suse), sans-serif;
                 font-size: 1.5rem;
                 font-weight: 500;
                 margin: 10px 0 1.5rem;
@@ -148,7 +142,7 @@
                     transition: 0.4s ease;
                 }
                 h3 {
-                    font-family: "SUSE", system-ui;
+                    font-family: var(--font-suse), system-ui;
                     font-size: 60px;
                     font-size: 2.5rem;
                     font-weight: 400;
@@ -160,8 +154,7 @@
                 }
             }
             p {
-                font-family: "Albert Sans", sans-serif;
-                font-family: "SUSE", system-ui;
+                font-family: var(--font-suse), system-ui;
                 font-weight: 400;
                 color: rgb(225, 225, 225);
                 user-select: none;
@@ -393,7 +386,7 @@
                 width: 100%;
             }
             .project {
-                padding: 1.7aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa5rem 0.5rem;
+                padding: 1.75 0.5rem;
                 .name-wrapper {
                     width: 100%;
                     text-align: center;

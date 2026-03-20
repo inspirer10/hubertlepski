@@ -8,32 +8,32 @@ const projectsData = [
     {
         title: 'Tuscany Restaurant',
         image: '/slider/tuscany.jpg',
-        link: '',
+        // link: '',
     },
     {
         title: 'Expiration Reminder',
         image: '/slider/expiration-reminder.jpg',
-        link: '',
+        // link: '',
     },
     {
         title: 'MUSTHAVE Store',
         image: '/slider/musthave2.jpg',
-        link: '',
+        // link: '',
     },
     {
         title: 'Food Master',
         image: '/slider/food-master.jpg',
-        link: '',
+        // link: '',
     },
     {
-        title: 'English Tutor',
-        image: '/slider/englishTutor.png',
-        link: '',
+        title: 'CoDrive',
+        image: '/slider/coDrive.png',
+        // link: '',
     },
     {
         title: 'Subscriptions Tracker',
         image: '/slider/subscriptions-tracker.jpg',
-        link: '',
+        // link: '',
     },
 ];
 
@@ -190,16 +190,14 @@ function ProjectSlider() {
                                     </div>
 
                                     <div className='text-wrapper'>
-                                        <motion.h3>
-                                            <Link href={link}>{title}</Link>
-                                        </motion.h3>
+                                        <motion.h3>{title}</motion.h3>
 
                                         <motion.div className='arrow-wrapper'>
                                             <FaAngleRight className='icon' />
                                         </motion.div>
                                     </div>
                                 </motion.div>
-                            )
+                            ),
                         )}
                     </div>
                 </section>

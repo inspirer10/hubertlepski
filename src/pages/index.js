@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'motion/react';
 import Introduction from '@/components/Introduction';
-import Header from '@/components/Header';
 import About from '@/components/About';
 import RecentPhotos from '@/components/RecentPhotos';
 import Technologies from '@/components/Technologies';
@@ -16,38 +15,7 @@ import Footer from '@/components/Footer';
 
 //* LENIS
 import Lenis from 'lenis';
-
-/*
-const geistSans = Geist({
-    variable: '--font-geist-sans',
-    subsets: ['latin'],
-});
-
-const suse = SUSE({
-    variable: '--font-suse',
-    subsets: ['latin'],
-});
-
-const inter = Inter({
-    subsets: ['latin'],
-    variable: '--font-inter',
-});
-
-const lexendDeca = Lexend_Deca({
-    subsets: ['latin'],
-    variable: '--font-lexend-deca',
-});
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-    subsets: ['latin'],
-    variable: '--font-plus-jakarta-sans',
-});
-
-const merienda = Merienda({
-    subsets: ['latin'],
-    variable: '--font-merienda',
-});
-*/
+import Navbar from '@/components/Header';
 
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true);
@@ -94,7 +62,7 @@ export default function Home() {
                         {isLoading && <InitialLoading />}
                     </AnimatePresence>
 
-                    <Header activeSection={activeSection} />
+                    <Navbar activeSection={activeSection} />
 
                     <Introduction />
 

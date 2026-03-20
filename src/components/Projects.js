@@ -13,9 +13,8 @@ function Projects() {
             icon: '👗',
             color: 'linear-gradient(to right,rgb(15, 15, 15), rgb(15, 15, 100))',
             src: 'webstoreScroll.jpg',
-            //srcX: 'webstoreScroll.jpg',
             url: 'https://musthave.vercel.app/',
-            id: 1337,
+            id: 1,
         },
 
         {
@@ -24,7 +23,7 @@ function Projects() {
             color: 'linear-gradient(to left bottom, #3C7748 45%, #E94816)',
             src: 'siemanko.png',
             url: 'https://siemanko-six.vercel.app/',
-            id: 5000,
+            id: 2,
         },
 
         {
@@ -33,7 +32,7 @@ function Projects() {
             color: 'linear-gradient(to right bottom, #ff6200, #311300)',
             src: 'seo-saas.png',
             url: 'https://seo-saas-company.vercel.app/',
-            id: 23425,
+            id: 3,
         },
 
         {
@@ -42,7 +41,7 @@ function Projects() {
             color: 'linear-gradient(to right bottom, rgb(96, 229, 80), rgb(11, 11, 11))',
             src: 'xyntiumSCroll.png',
             url: 'https://xyntium-finances.vercel.app/',
-            id: 213713370123,
+            id: 4,
         },
 
         {
@@ -51,7 +50,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #990087, #CE2B37)',
             src: 'englishTutor3.png',
             url: 'https://julia-grzesiek.vercel.app/',
-            id: 33,
+            id: 5,
         },
 
         {
@@ -60,7 +59,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #135200, #ffffff)',
             src: 'foodMaster.png',
             url: 'https://food-master-hl.vercel.app/',
-            id: 44,
+            id: 6,
         },
 
         {
@@ -69,7 +68,7 @@ function Projects() {
             color: 'linear-gradient(215deg, #6356ed, #00042f)',
             src: 'saas-companyScroll.png',
             url: 'https://saas-company.vercel.app/',
-            id: 1,
+            id: 7,
         },
 
         {
@@ -78,7 +77,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #00042f, #0015ff)',
             src: 'rentManager.png',
             url: 'https://rent-manager-hl.vercel.app/',
-            id: 33,
+            id: 8,
         },
 
         {
@@ -87,7 +86,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #00042f, #00031e)',
             src: 'prototypeVehicleScroll.jpg',
             url: 'https://inspirer10.github.io/prototype-vehicle/',
-            id: 2,
+            id: 9,
         },
 
         {
@@ -96,7 +95,7 @@ function Projects() {
             color: 'linear-gradient(to right, #257600 calc(100% / 3), white calc(100% / 3), white calc(100% / 3 * 2), #CE2B37 calc(100% / 3 * 2))',
             src: 'tuscanyScroll.jpg',
             url: 'https://inspirer10.github.io/tuscany/',
-            id: 3,
+            id: 10,
         },
 
         {
@@ -105,7 +104,7 @@ function Projects() {
             color: 'linear-gradient(to left bottom, #5a9d31, #0a3500)',
             src: 'expirationReminderScroll.png',
             url: 'https://inspirer10.github.io/expiration-reminder/',
-            id: 5,
+            id: 11,
         },
 
         {
@@ -114,7 +113,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #ca3f46, #FFF0DE)',
             src: 'subscriptionsTrackerScroll.png',
             url: 'https://inspirer10.github.io/subscriptions-tracker',
-            id: 6,
+            id: 12,
         },
 
         {
@@ -123,7 +122,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #ca3f46, #FFF0DE)',
             src: 'sushiScroll.jpg',
             url: 'https://inspirer10.github.io/sushi-page/',
-            id: 7,
+            id: 13,
         },
 
         {
@@ -132,7 +131,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #9f4fec, #7f43cc, #6138ac, #452b8d, #2c1f6e, #221a60, #181453, #0e0f46, #0e0f46, #0e0f46, #0e0f46, #0e0f46)',
             src: 'astraNFTScroll.jpg',
             url: 'https://astra-nft-sigma.vercel.app/',
-            id: 4,
+            id: 14,
         },
 
         {
@@ -141,7 +140,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #000, rgb(20, 20, 20))',
             src: 'astraCrypto-scroll.png',
             url: 'https://astra-crypto.vercel.app/',
-            id: 8,
+            id: 15,
         },
 
         {
@@ -150,7 +149,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #38ffb6, #5facff)',
             src: 'clinifyScroll.jpg',
             url: 'https://clinify-inspirer10.vercel.app/',
-            id: 9,
+            id: 16,
         },
 
         {
@@ -159,7 +158,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #e38643, #fff)',
             src: 'myHome-scroll.jpg',
             url: 'https://inspirer10.github.io/my-home/',
-            id: 10,
+            id: 17,
         },
 
         {
@@ -168,7 +167,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #090752, #fff)',
             src: 'kanban-scroll.jpg',
             url: 'https://draggable-kanban-board-topaz.vercel.app/',
-            id: 11,
+            id: 18,
         },
 
         {
@@ -177,7 +176,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #000000, #371c1f, #6a312c, #9b4d30, #c47229, #c47229, #c47229, #c47229, #9b4d30, #6a312c, #371c1f, #000000)',
             src: 'volcanic-wonderScroll.jpg',
             url: 'https://volcanic-wonder.vercel.app/',
-            id: 12,
+            id: 19,
         },
 
         {
@@ -186,7 +185,7 @@ function Projects() {
             color: 'linear-gradient(to right, #a5d0ff, #007bff)',
             src: 'weatherApp.jpg',
             url: 'https://inspirer10.github.io/weather-app/',
-            id: 13,
+            id: 20,
         },
 
         {
@@ -195,7 +194,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #ffffff, #e6e2ff, #cbc6ff, #adabff, #8a91ff, #7886ff, #637bff, #4870ff, #4870ff, #4870ff, #4870ff, #4870ff)',
             src: 'cars-rentalScroll.jpg',
             url: 'https://cars-rental-inspirer10.vercel.app/',
-            id: 14,
+            id: 21,
         },
 
         {
@@ -204,7 +203,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #000000, #331019, #620f24, #920728, #c20023, #c20023, #c20023, #c20023, #920728, #620f24, #331019, #000000)',
             src: 'fastFood-scroll.jpg',
             url: 'https://fast-food-taupe.vercel.app/',
-            id: 15,
+            id: 22,
         },
 
         {
@@ -213,7 +212,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #ffa600e0, #cecece)',
             src: 'auraLiving-scroll.jpg',
             url: 'https://aura-living.vercel.app/',
-            id: 16,
+            id: 23,
         },
 
         /* {
@@ -222,7 +221,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #ff0000, #ffee00)',
             src: 'pizzaRestaurant-Scroll.jpg',
             url: 'https://inspirer10.github.io/restaurant-page/',
-            id: 17,
+            id: 24,
         },
 
         {
@@ -231,7 +230,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #c8c8c8, #c8c8c8)',
             src: 'marle-scroll.png',
             url: 'https://inspirer10.github.io/marledipawele/',
-            id: 18,
+            id: 25,
         }, */
 
         {
@@ -240,7 +239,7 @@ function Projects() {
             color: 'linear-gradient(to right, #0d1803, #0d1803)',
             src: 'feed-india.jpg',
             url: 'https://inspirer10.github.io/feed-india/',
-            id: 19,
+            id: 26,
         },
         /*
         {
@@ -249,7 +248,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #58FF00, #241583)',
             src: 'ticTacToe-scroll.png',
             url: 'https://inspirer10.github.io/TicTacToe/',
-            id: 20,
+            id: 27,
         },
 
         {
@@ -258,7 +257,7 @@ function Projects() {
             color: 'linear-gradient(to right top, #cecece, #cecece)',
             src: 'hangmanScroll.png',
             url: 'https://inspirer10.github.io/hangman-react/',
-            id: 21,
+            id: 28,
         },*/
     ];
 

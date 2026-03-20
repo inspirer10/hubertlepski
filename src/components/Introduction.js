@@ -56,8 +56,8 @@ function Introduction() {
                         <Image
                             className='avatar_image'
                             src={'/avatar.png'}
-                            height={300}
-                            width={300}
+                            height={325}
+                            width={325}
                             priority={true}
                             //loading='lazy'
                             quality={100}
@@ -181,12 +181,12 @@ function Introduction() {
                                 >
                                     <Image
                                         src={`/technologies${src}`}
-                                        width={100}
-                                        height={100}
+                                        width={120}
+                                        height={120}
                                         alt={alt}
                                     />
                                 </motion.div>
-                            )
+                            ),
                         )}
                     </aside>
                 </main>

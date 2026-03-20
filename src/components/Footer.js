@@ -149,7 +149,7 @@ function Footer() {
                             </div>
                         </div>
 
-                        <summary>
+                        <div className='summary'>
                             <p className='info'>
                                 Wrocław, Poland {formattedTimeHours}
                                 <span className='colon'>:</span>
@@ -164,7 +164,7 @@ function Footer() {
                             >
                                 hubertlepsky@gmail.com
                             </Link>
-                        </summary>
+                        </div>
                     </main>
                 </div>
             </div>

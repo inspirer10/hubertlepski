@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { CodeIcon } from './animatedIcons/CodeIcon';
 import Link from 'next/link';
 
-function Header({ activeSection }) {
+function Navbar({ activeSection }) {
     const [isHeaderHovered, setIsHeaderHovered] = useState(false);
 
     const linksData = [
@@ -47,4 +47,4 @@ function Header({ activeSection }) {
     );
 }
 
-export default Header;
+export default Navbar;

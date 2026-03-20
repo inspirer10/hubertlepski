@@ -43,7 +43,7 @@
             }
             h2,
             h3 {
-                font-family: 'Onest', sans-serif;
+                font-family: var(--font-onest), sans-serif;
                 font-size: calc(4rem + 4px); //that's 4.25rem WOW - you guessed it
                 font-weight: 600;
                 letter-spacing: -0.5px;
@@ -55,8 +55,6 @@
                 width: fit-content;
             }
             h3 {
-                // font-family: 'Onest', sans-serif;
-                //font-size: 3.5rem;  dla plus jakarta sans
                 font-size: 4rem;
                 letter-spacing: -1px;
                 display: flex;
@@ -83,7 +81,7 @@
             .subHeading {
                 color: rgb(200, 200, 200);
                 margin: 1.75rem 0 1.75rem;
-                font-family: 'Onest', sans-serif;
+                font-family: var(--font-onest), sans-serif;
                 font-size: 20px;
                 font-weight: 500;
                 line-height: 1.45;
@@ -108,7 +106,7 @@
                     cursor: pointer;
                 }
                 .download_button {
-                    font-family: 'SUSE', sans-serif;
+                    font-family: var(--font-suse), sans-serif;
                     letter-spacing: -0.25px;
                     border-radius: 12px;
                     display: flex;
@@ -122,7 +120,7 @@
                     }
                 }
                 .projects {
-                    font-family: 'Onest', sans-serif;
+                    font-family: var(--font-onest), sans-serif;
                     padding: 25px;
                     // background-color: #c8edc4;  //color: #218d0b;
                     position: relative;

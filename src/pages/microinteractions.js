@@ -449,7 +449,7 @@ function Microinteractions() {
                     <div className='block' id='trends'>
                         <div className='heading'>
                             <FaArrowTrendUp className='icon' />
-                            <h3>Trendy na 2025</h3>
+                            <h3>Trendy na 2026</h3>
                         </div>
 
                         <div className='subblock'>

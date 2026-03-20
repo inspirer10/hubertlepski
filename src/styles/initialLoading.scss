@@ -13,8 +13,7 @@
     color: #FFF;
     cursor: none;
     p {
-        //font-family: "Inter", sans-serif;
-        font-family: "Onest", sans-serif;
+        font-family: var(--font-onest), sans-serif;
         font-size: clamp(2.25rem, 10vw, 4rem);
         letter-spacing: 1px;
         color: #fff;

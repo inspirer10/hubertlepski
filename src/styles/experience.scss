@@ -5,19 +5,13 @@
     // to remove
     //height: 100vh;
     h5 {
-        // font-family: 'Lexend Deca', sans-serif;
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        font-family: 'Inter', sans-serif;
-        font-family: 'Onest', sans-serif;
+        font-family: var(--font-onest), sans-serif;
         letter-spacing: 0.25px;
         font-size: 3.5rem;
         font-weight: 600;
     }
     .subHeading {
-        //font-family: 'Plus Jakarta Sans', sans-serif;
-        //font-family: 'Geist', sans-serif;
-        font-family: 'Inter', sans-serif;
-        font-family: 'Barlow', sans-serif;
+        font-family: var(--font-barlow), sans-serif;
         letter-spacing: -0.25px;
         font-size: 20px;
         font-weight: 400;
@@ -80,22 +74,18 @@
                 }
             }
             p {
-                //font-family: 'SUSE', sans-serif;
-                font-family: 'Plus Jakarta Sans', sans-serif;
-                font-family: 'Onest', sans-serif;
+                font-family: var(--font-onest), sans-serif;
                 font-size: 1.5rem;
                 font-weight: 500;
                 line-height: 1.4;
                 user-select: none;
             }
             .time {
-                //font-family: 'Geist', sans-serif;
                 color: rgb(80, 80, 80);
                 letter-spacing: -0.25px;
                 width: 20%;
             }
             .job-title {
-                //font-family: 'Geist', sans-serif;
                 font-weight: 400;
                 color: rgb(230, 230, 230);
                 width: 17.5%;
@@ -113,7 +103,7 @@
                 line-height: 1;
             }
             .download_button {
-                font-family: 'Onest', sans-serif;
+                font-family: var(--font-onest), sans-serif;
                 font-size: 16px;
                 color: rgb(110, 110, 110);
                 margin-left: 1rem;
