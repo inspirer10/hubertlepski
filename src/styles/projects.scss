@@ -40,7 +40,9 @@
                 background: linear-gradient(125deg, rgb(20, 20, 20) 0%, rgb(0, 0, 125) 100%);
             }
             &:nth-of-type(2) .image-wrapper {
-                background: linear-gradient(125deg, rgb(131, 10, 10) 0%, #ff61a6 60%, #fff700 100%);
+                //for english tutor
+                //background: linear-gradient(125deg, rgb(131, 10, 10) 0%, #ff61a6 60%, #fff700 100%);
+                background: linear-gradient(125deg, rgb(10, 50, 0) 2.5%, rgb(96, 229, 80) 75%, rgb(11, 11, 255) 20%);
             }
             &:nth-of-type(3) .image-wrapper {
                 //background: linear-gradient(135deg, #FC466B, #3F5EFB);
@@ -50,6 +52,7 @@
                 background: linear-gradient(135deg, rgb(170, 255, 0) 0%, #00eaff 100%);
                 background: linear-gradient(125deg, #003c00 0%, #90ee90 100%);
                 //background: linear-gradient(135deg, #90ee90 0%, #003c00 100%);
+                background: linear-gradient(135deg, #7fd4ac 0%, #1e1b4b 75%);
             }
             .image-wrapper {
                 height: 27.5rem;

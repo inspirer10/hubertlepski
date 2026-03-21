@@ -45,6 +45,15 @@ function Projects() {
         },
 
         {
+            name: 'CoDrive',
+            icon: '🚖',
+            color: 'linear-gradient(to right top, #1e1b4b 22.5%, #a7f3d0)',
+            src: 'coDrive.png',
+            url: 'https://co-drive-hl.vercel.app/',
+            id: 100,
+        },
+
+        {
             name: 'English Tutor',
             icon: '👩🏽‍🏫',
             color: 'linear-gradient(to right top, #990087, #CE2B37)',
@@ -170,6 +179,7 @@ function Projects() {
             id: 18,
         },
 
+        /*
         {
             name: 'Volcanic Wonder',
             icon: '🌋',
@@ -178,6 +188,7 @@ function Projects() {
             url: 'https://volcanic-wonder.vercel.app/',
             id: 19,
         },
+        */
 
         {
             name: 'Weather App',
@@ -267,29 +278,31 @@ function Projects() {
         currentElement: '',
     });
 
+    const revealEase = [0.22, 1, 0.36, 1];
+
     return (
         <section className='projects_section' id='Projects'>
             <motion.h5
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: -38 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 1.1,
-                    delay: 0.3,
-                    type: 'ease',
+                    duration: 0.82,
+                    delay: 0.22,
+                    ease: revealEase,
                 }}
             >
                 Projects
             </motion.h5>
             <motion.p
                 className='subHeading'
-                initial={{ opacity: 0, x: -55 }}
+                initial={{ opacity: 0, x: -42 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 1.1,
-                    delay: 0.375,
-                    type: 'ease',
+                    duration: 0.82,
+                    delay: 0.3,
+                    ease: revealEase,
                 }}
             >
                 Feel free to take a look at some of my projects
@@ -310,6 +323,7 @@ function Projects() {
                     <p>MUSTHAVE Webstore</p>
                 </div>
 
+                {/*
                 <div className='project-card'>
                     <div className='image-wrapper'>
                         <Image
@@ -323,6 +337,19 @@ function Projects() {
                         />
                     </div>
                     <p>English Tutor</p>
+                </div> */}
+
+                <div className='project-card'>
+                    <div className='image-wrapper'>
+                        <Image
+                            src={'/projects/thumbnails/xyntium3.png'}
+                            height={600}
+                            width={600}
+                            quality={100}
+                            alt='project spotlight thumbnail'
+                        />
+                    </div>
+                    <p>Xyntium Finances</p>
                 </div>
 
                 <div className='project-card'>

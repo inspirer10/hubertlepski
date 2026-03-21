@@ -50,29 +50,32 @@ function Experience() {
         },
     ];
 
+    const revealEase = [0.22, 1, 0.36, 1];
+    const hoverEase = [0.25, 1, 0.5, 1];
+
     return (
         <section className='experience_section' id='Experience'>
             <motion.h5
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: -38 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 1.1,
-                    delay: 0.3,
-                    type: 'ease',
+                    duration: 0.82,
+                    delay: 0.22,
+                    ease: revealEase,
                 }}
             >
                 Experience
             </motion.h5>
             <motion.p
                 className='subHeading'
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: -38 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 1.1,
-                    delay: 0.4,
-                    type: 'ease',
+                    duration: 0.82,
+                    delay: 0.3,
+                    ease: revealEase,
                 }}
             >
                 Practical experience I’ve gained through various projects, jobs
@@ -95,36 +98,34 @@ function Experience() {
                         <motion.div
                             key={index}
                             className='experience-item'
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 24 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, amount: 0.2 }}
                             whileHover={{
-                                x: 14,
+                                x: 10,
                                 transition: {
-                                    duration: 0.325,
-                                    delay: 0.025,
-                                    type: 'ease',
+                                    duration: 0.38,
+                                    ease: hoverEase,
                                 },
                             }}
-                            animate={{
-                                x: 0,
+                            whileTap={{
+                                x: 5,
                                 transition: {
-                                    duration: 0.325,
-                                    delay: 0.15,
-                                    type: 'ease',
+                                    duration: 0.2,
+                                    ease: [0.4, 0, 0.2, 1],
                                 },
                             }}
                             transition={{
-                                duration: 0.6,
-                                delay: index * 0.2,
-                                type: 'easeIn',
+                                duration: 0.62,
+                                delay: index * 0.115,
+                                ease: revealEase,
                             }}
                         >
                             <p className='time'>{time}</p>
                             <p className='job-title'>{jobTitle}</p>
                             <p className='company-name'>{company}</p>
                             {certificate && (
-                                <a
+                                <motion.a
                                     className='download_button'
                                     href={href}
                                     download={fileName}
@@ -133,10 +134,17 @@ function Experience() {
                                     onMouseEnter={() =>
                                         setIsHeaderHovered(true)
                                     }
-                                    onMouseMove={() => setIsHeaderHovered(true)}
                                     onMouseLeave={() =>
                                         setIsHeaderHovered(false)
                                     }
+                                    onFocus={() => setIsHeaderHovered(true)}
+                                    onBlur={() => setIsHeaderHovered(false)}
+                                    whileHover={{ x: 2 }}
+                                    whileTap={{ scale: 0.975 }}
+                                    transition={{
+                                        duration: 0.26,
+                                        ease: hoverEase,
+                                    }}
                                 >
                                     <DownloadIcon
                                         isHovered={isHeaderHovered}
@@ -146,7 +154,7 @@ function Experience() {
                                         height={23}
                                     />
                                     Certificate
-                                </a>
+                                </motion.a>
                             )}
                         </motion.div>
                     )

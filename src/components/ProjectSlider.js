@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import React, { useMemo } from 'react';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import { FaAngleRight } from 'react-icons/fa6';
-import Link from 'next/link';
 
 const projectsData = [
     {
@@ -41,6 +40,9 @@ function ProjectSlider() {
     const doubledProjectsData = useMemo(() => {
         return [...projectsData, ...projectsData];
     }, []);
+    const shouldReduceMotion = useReducedMotion();
+    const revealEase = [0.22, 1, 0.36, 1];
+    const hoverEase = [0.25, 1, 0.5, 1];
 
     return (
         {
@@ -145,60 +147,76 @@ function ProjectSlider() {
 
                 <section className='projects-slider-container'>
                     <div className='projects-slider'>
-                        {doubledProjectsData.map(
-                            ({ image, title, link }, index) => (
-                                <motion.div
-                                    className='project-card'
-                                    key={index}
-                                    //initial={{ opacity: 0 }}
-                                    //whileInView={{ opacity: 1 }}
-                                    //viewport={{ once: true }}
-                                    whileHover={{
-                                        y: -10,
-                                        borderColor:
-                                            'rgba(255, 255, 255, 0.225)',
-                                        transition: {
-                                            duration: 0.4,
-                                            type: 'ease',
-                                            //ease: [0.33, 1, 0.68, 1], // Custom easing
-                                        },
-                                    }}
-                                    animate={{
-                                        y: 0,
-                                        borderColor: 'rgba(255, 255, 255, 0.1)',
-                                        transition: {
-                                            duration: 0.4,
-                                            //ease: [0.33, 1, 0.68, 1],
-                                            type: 'ease',
-                                        },
-                                    }}
-                                    //transition={{
-                                    //    duration: 0.6,
-                                    //    delay: index * 0.15,
-                                    //    type: 'easeIn',
-                                    //</div>}}
-                                >
-                                    <div className='image-wrapper'>
-                                        <Image
-                                            className='project-image'
-                                            src={image}
-                                            width={650}
-                                            height={500}
-                                            quality={90}
-                                            alt={title}
-                                        />
-                                    </div>
+                        {doubledProjectsData.map(({ image, title }, index) => (
+                            <motion.div
+                                className='project-card'
+                                key={index}
+                                initial={
+                                    shouldReduceMotion
+                                        ? { opacity: 0 }
+                                        : {
+                                              opacity: 0,
+                                              y: 24,
+                                              scale: 0.988,
+                                          }
+                                }
+                                animate={
+                                    shouldReduceMotion
+                                        ? { opacity: 1 }
+                                        : { opacity: 1, y: 0, scale: 1 }
+                                }
+                                transition={{
+                                    duration: shouldReduceMotion ? 0.45 : 0.62,
+                                    delay:
+                                        (index % projectsData.length) * 0.07 +
+                                        0.08,
+                                    ease: revealEase,
+                                }}
+                                whileHover={
+                                    shouldReduceMotion
+                                        ? undefined
+                                        : {
+                                              y: -8,
+                                              borderColor:
+                                                  'rgba(255, 255, 255, 0.225)',
+                                              transition: {
+                                                  duration: 0.34,
+                                                  ease: hoverEase,
+                                              },
+                                          }
+                                }
+                                whileTap={
+                                    shouldReduceMotion
+                                        ? undefined
+                                        : {
+                                              y: -4,
+                                              transition: {
+                                                  duration: 0.18,
+                                                  ease: [0.4, 0, 0.2, 1],
+                                              },
+                                          }
+                                }
+                            >
+                                <div className='image-wrapper'>
+                                    <Image
+                                        className='project-image'
+                                        src={image}
+                                        width={600}
+                                        height={450}
+                                        quality={90}
+                                        alt={title}
+                                    />
+                                </div>
 
-                                    <div className='text-wrapper'>
-                                        <motion.h3>{title}</motion.h3>
+                                <div className='text-wrapper'>
+                                    <motion.h3>{title}</motion.h3>
 
-                                        <motion.div className='arrow-wrapper'>
-                                            <FaAngleRight className='icon' />
-                                        </motion.div>
-                                    </div>
-                                </motion.div>
-                            ),
-                        )}
+                                    <motion.div className='arrow-wrapper'>
+                                        <FaAngleRight className='icon' />
+                                    </motion.div>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </section>
             </>

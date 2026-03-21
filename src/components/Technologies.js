@@ -37,29 +37,32 @@ function Technologies() {
         return [...imagesData, ...imagesData];
     }, []); //empty array bcs imagesData is static
 
+    const revealEase = [0.22, 1, 0.36, 1];
+    const hoverEase = [0.25, 1, 0.5, 1];
+
     return (
         <section className='technologies_section' id='Technologies'>
             <motion.h5
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 1.1,
-                    delay: 0.3,
-                    type: 'ease',
+                    duration: 0.82,
+                    delay: 0.22,
+                    ease: revealEase,
                 }}
             >
                 Technologies
             </motion.h5>
             <motion.p
                 className='subHeading'
-                initial={{ opacity: 0, x: -55 }}
+                initial={{ opacity: 0, x: -45 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 1.1,
-                    delay: 0.375,
-                    type: 'ease',
+                    duration: 0.82,
+                    delay: 0.3,
+                    ease: revealEase,
                 }}
             >
                 Some of the technologies and tools that I use in my work
@@ -89,30 +92,27 @@ function Technologies() {
                     <motion.div
                         key={index}
                         className='tech-card'
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: '-125px' }}
                         transition={{
-                            duration: 0.6,
-                            delay: index * 0.0825,
-                            type: 'ease',
+                            duration: 0.62,
+                            delay: index * 0.0725,
+                            ease: revealEase,
                         }}
                         whileHover={{
-                            transform: 'translateY(-6px)',
+                            y: -6,
                             backgroundColor: 'rgba(40, 40, 40, 1)',
                             transition: {
-                                duration: 0.25,
-                                type: 'ease',
-                                delay: 0.075,
+                                duration: 0.34,
+                                ease: hoverEase,
                             },
                         }}
-                        animate={{
-                            transform: 'translateY(0px)',
-                            backgroundColor: 'rgba(30, 30, 30, 0.925);',
+                        whileTap={{
+                            y: -3,
                             transition: {
-                                duration: 0.25,
-                                type: 'ease',
-                                delay: 0.075,
+                                duration: 0.18,
+                                ease: [0.4, 0, 0.2, 1],
                             },
                         }}
                     >

@@ -3,8 +3,25 @@ import React, { useCallback, useState } from 'react';
 import { motion, useAnimation } from 'motion/react';
 import { DownloadIcon } from './animatedIcons/DownloadIcon';
 import { BsMouse3 } from 'react-icons/bs';
+import { FiCode, FiCompass } from 'react-icons/fi';
 import Link from 'next/link';
 import DarkVeil from './DarkVeil/DarkVeil';
+
+const aboutStats = [
+    {
+        id: 'years',
+        icon: FiCompass,
+        value: '4+',
+        label: 'Years of experience',
+    },
+    {
+        id: 'projects',
+        icon: FiCode,
+        value: '40+',
+        label: 'Projects shipped',
+        isAccent: true,
+    },
+];
 
 function Introduction() {
     const [isHovered, setIsHovered] = useState(false);
@@ -17,32 +34,6 @@ function Introduction() {
             element.scrollIntoView({ behavior: 'smooth' });
         }
     }, []);
-
-    const imagesData = [
-        { src: '/html.png', alt: 'HTML', backgroundColor: '#F06529' },
-        { src: '/css.png', alt: 'CSS', backgroundColor: '#2565ae' },
-        { src: '/sass.png', alt: 'Sass', backgroundColor: '#CD6799' },
-
-        //*2nd row
-        { src: '/tailwind.png', alt: 'Tailwind', backgroundColor: '#84f1ff' },
-        { src: '/js.png', alt: 'JavaScript', backgroundColor: '#F0DB4F' },
-        { src: '/react.png', alt: 'React', backgroundColor: '#61DBFB' },
-
-        //*3rd row
-        { src: '/zustand.jpg', alt: 'Zustand', backgroundColor: '#8B4513' },
-        { src: '/redux.png', alt: 'Redux', backgroundColor: '#6d009c' },
-        { src: '/next.png', alt: 'Next.js', backgroundColor: '#84f1ff' },
-
-        //*4th row
-        { src: '/git.png', alt: 'Git', backgroundColor: '#ffff00' },
-        { src: '/mui.png', alt: 'MUI', backgroundColor: '#007bff' },
-        { src: '/ts.png', alt: 'TypeScript', backgroundColor: '#358EF1' },
-
-        //*5th row
-        { src: '/node.png', alt: 'Node.js', backgroundColor: '#66CC33' },
-        { src: '/storybook.svg', alt: 'Storybook', backgroundColor: '#ff00ea' },
-        { src: '/mongoDB.png', alt: 'MongoDB', backgroundColor: '#77ff00' },
-    ];
 
     return (
         <section className='introduction_section' id='Home'>
@@ -128,6 +119,15 @@ function Introduction() {
                                 type: 'easeIn',
                             }}
                         >
+                            <button
+                                className='projects'
+                                onClick={(e) =>
+                                    handleContactClick(e, 'Contact')
+                                }
+                            >
+                                Available for new projects
+                            </button>
+
                             <Link
                                 href='/CV/CV.pdf'
                                 download='Hubert Łepski CV.pdf'
@@ -152,42 +152,73 @@ function Introduction() {
                                     />
                                 </button>
                             </Link>
-                            <button
-                                className='projects'
-                                onClick={(e) =>
-                                    handleContactClick(e, 'Contact')
-                                }
-                            >
-                                Available for new projects
-                            </button>
                         </motion.div>
                     </article>
 
-                    <aside className='technologies_wrapper'>
-                        {imagesData.map(
-                            ({ src, alt, backgroundColor }, index) => (
-                                <motion.div
-                                    style={{ '--attr-bgc': backgroundColor }}
-                                    key={index}
-                                    className='tech-card'
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{
-                                        duration: 0.85,
-                                        delay: index * 0.3,
-                                        type: 'ease',
-                                    }}
-                                >
-                                    <Image
-                                        src={`/technologies${src}`}
-                                        width={120}
-                                        height={120}
-                                        alt={alt}
-                                    />
-                                </motion.div>
-                            ),
-                        )}
+                    <aside className='aboutMe_wrapper'>
+                        <motion.div
+                            className='aboutCard--avatar'
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                                delay: 2.9,
+                                duration: 0.9,
+                                ease: 'easeOut',
+                            }}
+                        >
+                            <Image
+                                className='aboutCard_avatarImage'
+                                src='/avatar.png'
+                                fill
+                                sizes='(max-width: 550px) 95vw, 375px'
+                                quality={100}
+                                priority
+                                alt='Hubert Łepski avatar'
+                            />
+
+                            <div className='aboutCard_avatarGradient'></div>
+                            <div className='aboutCard_location'>
+                                <div>
+                                    <p className='aboutCard_locationName'>
+                                        Wrocław, PL
+                                    </p>
+                                    <p className='aboutCard_locationLabel'>
+                                        Current location
+                                    </p>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <div className='aboutMe_statsRow'>
+                            {aboutStats.map((stat, index) => {
+                                const StatIcon = stat.icon;
+                                return (
+                                    <motion.div
+                                        key={stat.id}
+                                        className={`aboutCard--stat ${stat.isAccent ? 'aboutCard--accent' : ''}`}
+                                        initial={{ opacity: 0, y: 22 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{
+                                            delay: 3.05 + index * 0.14,
+                                            duration: 0.75,
+                                            ease: 'easeOut',
+                                        }}
+                                    >
+                                        <span className='aboutCard_statIcon'>
+                                            <StatIcon />
+                                        </span>
+                                        <p className='aboutCard_statValue'>
+                                            {stat.value}
+                                        </p>
+                                        <p className='aboutCard_statLabel'>
+                                            {stat.label}
+                                        </p>
+                                    </motion.div>
+                                );
+                            })}
+                        </div>
                     </aside>
                 </main>
 
