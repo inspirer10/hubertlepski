@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { motion, useAnimation } from 'motion/react';
 import { DownloadIcon } from './animatedIcons/DownloadIcon';
 import { BsMouse3 } from 'react-icons/bs';
@@ -23,9 +23,45 @@ const aboutStats = [
     },
 ];
 
+const stackItems = [
+    { id: 'html', src: '/technologies/html.png', label: 'HTML' },
+    { id: 'css', src: '/technologies/css.png', label: 'CSS' },
+    { id: 'sass', src: '/technologies/sass.png', label: 'Sass' },
+    { id: 'git', src: '/technologies/git.png', label: 'Git' },
+    { id: 'rwd', src: '/technologies/rwd.png', label: 'RWD' },
+    { id: 'vsc', src: '/technologies/vsc.png', label: 'VSC' },
+    { id: 'js', src: '/technologies/js.png', label: 'JavaScript' },
+    { id: 'react', src: '/technologies/react.png', label: 'React' },
+    { id: 'zustand', src: '/technologies/zustand.jpg', label: 'Zustand' },
+    { id: 'redux', src: '/technologies/redux.png', label: 'Redux' },
+    { id: 'next', src: '/technologies/next.png', label: 'Next.js' },
+    { id: 'mui', src: '/technologies/mui.png', label: 'MUI' },
+    { id: 'ts', src: '/technologies/ts.png', label: 'TypeScript' },
+    { id: 'node', src: '/technologies/node.png', label: 'Node.js' },
+    { id: 'express', src: '/technologies/express.png', label: 'Express' },
+    { id: 'mongo', src: '/technologies/mongoDB.png', label: 'MongoDB' },
+    { id: 'ux-ui', src: '/technologies/uxui.png', label: 'UX/UI' },
+    { id: 'copilot', src: '/technologies/copilot.png', label: 'Copilot' },
+    { id: 'storybook', src: '/technologies/storybook.svg', label: 'Storybook' },
+    { id: 'tailwind', src: '/technologies/tailwind.png', label: 'Tailwind' },
+    { id: 'bootstrap', src: '/technologies/bootstrap.png', label: 'Bootstrap' },
+    {
+        id: 'react-router',
+        src: '/technologies/router.png',
+        label: 'React Router',
+    },
+    {
+        id: 'framer-motion',
+        src: '/technologies/framerMotion.png',
+        label: 'Framer Motion',
+    },
+    { id: 'git-flow', src: '/technologies/gitFlow.jpg', label: 'Git Flow' },
+];
+
 function Introduction() {
     const [isHovered, setIsHovered] = useState(false);
     const controls = useAnimation();
+    const marqueeStackItems = useMemo(() => [...stackItems, ...stackItems], []);
 
     const handleContactClick = useCallback((e, sectionId) => {
         e.preventDefault();
@@ -153,6 +189,43 @@ function Introduction() {
                                 </button>
                             </Link>
                         </motion.div>
+
+                        <motion.article
+                            className='introStack_article'
+                            initial={{ opacity: 0, y: 25 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                                delay: 3.2,
+                                duration: 0.9,
+                                ease: 'easeOut',
+                            }}
+                        >
+                            <p className='introStack_heading'>Tech stack</p>
+
+                            <div className='introStack_slider'>
+                                <div className='introStack_track'>
+                                    {marqueeStackItems.map(
+                                        ({ src, label, id }, index) => (
+                                            <div
+                                                key={`${id}-${index}`}
+                                                className='introStack_item'
+                                            >
+                                                <div className='introStack_icon'>
+                                                    <Image
+                                                        src={src}
+                                                        width={50}
+                                                        height={50}
+                                                        alt={label}
+                                                    />
+                                                </div>
+                                                <span>{label}</span>
+                                            </div>
+                                        ),
+                                    )}
+                                </div>
+                            </div>
+                        </motion.article>
                     </article>
 
                     <aside className='aboutMe_wrapper'>
@@ -169,7 +242,7 @@ function Introduction() {
                         >
                             <Image
                                 className='aboutCard_avatarImage'
-                                src='/avatar.png'
+                                src='/avatarNew.png'
                                 fill
                                 sizes='(max-width: 550px) 95vw, 375px'
                                 quality={100}
